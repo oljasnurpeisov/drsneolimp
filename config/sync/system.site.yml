@@ -1,0 +1,14 @@
+uuid: 60a75836-58e2-4188-b43d-9b46f7a4043b
+name: 'Дирекция развития спорта по неолимпийским видам акимата города Нур-Султан'
+mail: oljasnurpeisov@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
