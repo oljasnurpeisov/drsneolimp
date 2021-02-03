@@ -13,10 +13,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-          "type": "composer",
-          "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -26,7 +22,9 @@
         "drupal/admin_toolbar": "^2.4",
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/core-recommended": "^9.0",
+        "drupal/date_range_formatter": "9.0.x-dev@dev",
         "drupal/easy_breadcrumb": "^1.13",
+        "drupal/glisseo": "^1.0@alpha",
         "drupal/imagemagick": "^3.1",
         "drupal/pathauto": "^1.8",
         "drupal/twig_tweak": "^3.0",
@@ -74,10 +72,9 @@
                 "web-root": "web/"
             }
         },
-        "installer-types": ["bower-asset", "npm-asset"],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
+            "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
