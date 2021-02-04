@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function drsneolimp_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+ switch ($form_id) {
+   case 'node_news_form':
+     $form['#prefix'] = '<div id="form-wrapper">';
+     $form['#suffix'] = '</div>';
+
+     $form['field_news_type']['widget']['#ajax'] = [
+         'callback' => 'news_type_change',
+         'wrapper' => 'form-wrapper',
+         'event' => 'change',
+       ];
+
+       $form['field_date_range']['#access'] = FALSE;
+       $input = $form_state->getUserInput();
+       if (isset($input['field_news_type']) && $input['field_news_type'] == 1) {
+         $form['field_date_range']['#access'] = TRUE;
+       }
+     break;
+ }
+}
+function news_type_change($form, \Drupal\Core\Form\FormStateInterface &$form_state) {
+  return $form;
+}

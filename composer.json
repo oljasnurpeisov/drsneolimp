@@ -23,6 +23,7 @@
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/core-recommended": "^9.0",
         "drupal/date_range_formatter": "9.0.x-dev@dev",
+        "drupal/devel": "^4.1",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/glisseo": "^1.0@alpha",
         "drupal/imagemagick": "^3.1",
@@ -35,6 +36,7 @@
     },
     "require-dev": {
         "drupal/core-dev": "^9.0",
+        "kint-php/kint": "^3.3",
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
