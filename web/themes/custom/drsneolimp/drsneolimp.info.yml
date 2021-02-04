@@ -1,0 +1,10 @@
+# Theme base information.
+screenshot: screenshot.jpg
+name: drsneolimp (base theme)
+type: theme
+description: 'custom theme for drsneolimp'
+package: custom
+core_version_requirement: ^9
+base theme: stable
+dependencies:
+  - drupal:twig_tweak (>=3.0.0)
