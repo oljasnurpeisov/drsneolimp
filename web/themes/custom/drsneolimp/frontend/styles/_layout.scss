@@ -1,0 +1,137 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: $f-main-r;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.container {
+  position: relative;
+  @media screen and(min-width: 1200px) {
+    max-width: 1216px + 30px;
+  }
+}
+
+.main {
+  background: $c-grey-2;
+  background-size: 50%;
+  padding: 30px 0;
+
+  &--general {
+    // background: url(../images/svg/main-page-bg.svg) no-repeat;
+  }
+
+  &--sport-kinds {
+    padding: 30px 0 94px;
+    .c-card {
+      margin-bottom: 32px;
+    }
+  }
+
+  &--events {
+    padding: 30px 0 125px;
+  }
+
+  &--news {
+    padding: 30px 0 130px;
+  }
+
+  &--trainers {
+    padding: 30px 0 125px;
+  }
+
+  &--gallery, &--current-gallery, &--current-news, &--contacts {
+    padding: 30px 0 125px;
+  }
+}
+
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.row {
+  margin-right: -16px;
+  margin-left: -16px;
+}

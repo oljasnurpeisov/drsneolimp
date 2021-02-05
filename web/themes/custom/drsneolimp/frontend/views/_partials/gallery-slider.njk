@@ -1,0 +1,16 @@
+<div class="swiper-block">
+    <div class="swiper--gallery">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for i in range(10) %}
+                    <a href="current-gallery.html" class="gallery-card link-card swiper-slide">
+                        <img src="images/img.png" alt="preview" class="link-card__zoom">
+                        <div class="gallery-card__content">
+                            <h3 class="h3">Чемпионат Республики Казахстан по жиму лежа</h3>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

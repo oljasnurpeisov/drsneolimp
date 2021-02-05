@@ -1,0 +1,39 @@
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-align {
+    &-center {
+      text-align: center;
+    }
+
+    &-right {
+      text-align: right;
+    }
+
+    &-left {
+      text-align: left;
+    }
+  }
+
+  &-body {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &-normal {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &-small {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  &-large {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
