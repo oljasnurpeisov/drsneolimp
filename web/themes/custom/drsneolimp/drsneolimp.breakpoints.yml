@@ -1,28 +1,28 @@
-STARTER.xs:
+drsneolimp.xs:
   label: XS
   mediaQuery: '(min-width: 0px)'
   weight: 0
   multipliers:
   - 1x
-STARTER.sm:
+drsneolimp.sm:
   label: SM
   mediaQuery: '(min-width: 576px)'
   weight: 0
   multipliers:
   - 1x
-STARTER.md:
+drsneolimp.md:
   label: MD
   mediaQuery: '(min-width: 768px)'
   weight: 0
   multipliers:
   - 1x
-STARTER.lg:
+drsneolimp.lg:
   label: LG
   mediaQuery: '(min-width: 992px)'
   weight: 0
   multipliers:
   - 1x
-STARTER.xl:
+drsneolimp.xl:
   label: XL
   mediaQuery: '(min-width: 1140px)'
   weight: 0

@@ -295,14 +295,14 @@ function drsneolimp_element_info_alter(array &$types) {
  *
  * @todo consider use it or remove.
  */
-function _drsneolimp_process_form_element(array &$element, FormStateInterface $form_state, &$complete_form) {
-  if (!empty($complete_form['#form_id'])) {
-    // Add additional variable to element to determine parent form id.
-    $element['#form_element_form_id'] = $complete_form['#form_id'];
-  }
-
-  return $element;
-}
+// function _drsneolimp_process_form_element(array &$element, FormStateInterface $form_state, &$complete_form) {
+//   if (!empty($complete_form['#form_id'])) {
+//     // Add additional variable to element to determine parent form id.
+//     $element['#form_element_form_id'] = $complete_form['#form_id'];
+//   }
+//
+//   return $element;
+// }
 
 /**
  * Implements hook_preprocess().

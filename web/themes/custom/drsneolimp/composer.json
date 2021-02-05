@@ -14,6 +14,6 @@
   },
   "license": "GPL-2.0-or-later",
   "require": {
-      "drupal/twig_tweak": "^3.0.0@dev"
+      "drupal/twig_tweak": "^3.0"
   }
 }

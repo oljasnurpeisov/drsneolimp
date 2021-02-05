@@ -7,4 +7,22 @@ package: custom
 core_version_requirement: ^9
 base theme: stable
 dependencies:
-  - drupal:twig_tweak (>=3.0.0)
+  - drupal:twig_tweak (^3.0)
+
+libraries:
+  - drsneolimp/style.base
+  - drsneolimp/style.layout
+  - drsneolimp/style.component
+  - drsneolimp/style.utilities
+
+regions:
+  header: Header
+  navigation: Navigation
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+
+# Disable system libraries.
+# libraries-override:
+#   system/base: false
