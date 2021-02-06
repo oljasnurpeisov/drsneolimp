@@ -1,0 +1,120 @@
+{% set page = 'sport-kinds' %}
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+    <main class="main main--sport">
+        <div class="container">
+            <ul class="crumbs">
+                <li>
+                    <a href="">Главная</a>
+                </li>
+                <li>
+                    <a href="">Виды спорта</a>
+                </li>
+                <li>
+                    <a href="">Киокушинкай каратэ</a>
+                </li>
+            </ul>
+
+            <section class="section pt-0px">
+                <h1 class="h1">Киокушинкай каратэ</h1>
+                <div class="row mb-47px">
+                    <div class="col-md-8">
+                        <p>Стиль киокушинкай был создан в противовес множеству бесконтактных школ и самому принципу «каратэ безконтакта». Демонстрируя миру мощь реального каратэ, Киокушинкай постепенно завоевал популярность во многих странах, а позже лег в основу ряда других контактных стилей карате.</p>
+                    </div>
+                </div>
+                <h2 class="h2">Новости по #Киокушинкай каратэ</h2>
+                {% include "_partials/news-block.njk" %}
+
+                <div class="row mt-15px">
+                    <div class="col-md-8">
+                        <div class="row">
+                            {% for i in range(6) %}
+                                <div class="col-md-6">
+                                    <a href="" class="news-card link-card">
+                                        <div class="news-card__header">
+                                            <img src="images/img.png" alt="news-preview" class="link-card__zoom">
+                                        </div>
+                                        <div class="news-card__content">
+                                            <p class="text-small mb-2px">22 Қаңтар 2019 <span class="eye ml-10px">620</span></p>
+                                            <p class="font-bold mb-8px link-card__title">Онлайн турнир по асык ату</p>
+                                            <p class="text-small">#Асық ату</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="" target="_blank" class="advertize mt-15px">
+                            <img src="images/adv.png" alt="advertize">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-jcc mt-27px">
+                    <button class="btn btn--secondary">Показать еще</button>
+                </div>
+            </section>
+
+            <section class="section pt-0px">
+                <h2 class="h2">Новости по #Киокушинкай каратэ</h2>
+
+                <div class="row">
+                    {% for i in range(10) %}
+                        <div class="col-xl-2 col-lg-4 col-md-6 mb-26px">
+                            <figure class="trainer-card swiper-slide {{'active' if i==2 }}">
+                                <div class="trainer-card__header">
+                                    <div class="trainer-card__icon">
+                                        <img src="images/img.png" alt="icon">
+                                    </div>
+                                    Старший тренер
+                                </div>
+                                <p class="font-bold mb-9px">Абдахин Серик Нургалиевич</p>
+                                <p class="text-normal">#Гиревой спорт</p>
+                                <div class="bullets mt-12px">
+                                    <div class="bullet">ЗТРК</div>
+                                    <div class="bullet">ЗТРК</div>
+                                </div>
+                            </figure>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="h2">Планируемые мероприятия по #Киокушинкай каратэ</h2>
+                {% include "_partials/events-slider.njk" %}
+            </section>
+            
+            <section class="section">
+                <div class="title-row">
+                    <h2 class="h2 mb-0px">Галерея #Киокушинкай каратэ</h2>
+                    <div class="d-flex flex-aic">
+                        <div class="d-flex ml-16px swiper-btns--gallery">
+                            <div class="swiper-btn swiper-btn-prev">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.52152 11.8759C6.60315 11.9586 6.7052 12 6.81745 12C6.9297 12 7.03175 11.9586 7.11338 11.8759C7.27666 11.7103 7.27666 11.4414 7.11338 11.2759L1.90902 6L7.11338 0.724138C7.27666 0.558621 7.27666 0.289655 7.11338 0.124138C6.95011 -0.0413793 6.68479 -0.0413793 6.52152 0.124138L1.02122 5.7C0.857943 5.86552 0.857943 6.13448 1.02122 6.3L6.52152 11.8759V11.8759Z" fill="#141414"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-btn swiper-btn-next ml-10px">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.47848 11.8759C1.39685 11.9586 1.2948 12 1.18255 12C1.0703 12 0.968253 11.9586 0.886616 11.8759C0.723342 11.7103 0.723342 11.4414 0.886616 11.2759L6.09098 6L0.886616 0.724138C0.723342 0.558621 0.723342 0.289655 0.886616 0.124138C1.04989 -0.0413793 1.31521 -0.0413793 1.47848 0.124138L6.97878 5.7C7.14206 5.86552 7.14206 6.13448 6.97878 6.3L1.47848 11.8759V11.8759Z" fill="#141414"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% include "_partials/gallery-slider.njk" %}
+            </section>
+            
+            <section class="section">
+                <div class="title-row">
+                    <h2 class="h2 mb-0px">Другие виды спорта</h2>
+                    <a href="http://" target="_blank" rel="noopener noreferrer" class="link link--blue">Посмотреть все</a>
+                </div>
+                {% include "_partials/sport-kinds-slider.njk" %}
+            </section>
+        </div>
+    </main>
+{% endblock %}

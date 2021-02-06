@@ -1,0 +1,15 @@
+.list {
+  &--unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--decimal {
+    list-style: decimal;
+  }
+
+  &--decimal-zero {
+    list-style: decimal-leading-zero;
+  }
+}

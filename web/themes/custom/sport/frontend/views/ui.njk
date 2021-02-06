@@ -1,0 +1,105 @@
+{% set page = 'UI' %}
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+    <main class="main">
+        <div class="container">
+            <ul class="crumbs">
+                <li>
+                    <a href="">Главная</a>
+                </li>
+                <li>
+                    <a href="">Тренерский состав</a>
+                </li>
+            </ul>
+
+            <section>
+                <h1 class="h1">UI</h1>
+
+                <table class="table">
+                    <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>
+                            <div class="btn btn--primary btn--dots">
+                                <svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 2C18 3.10457 17.1046 4 16 4C14.8954 4 14 3.10457 14 2C14 0.89543 14.8954 0 16 0C17.1046 0 18 0.89543 18 2Z" fill="#141414"/>
+                                    <path d="M11 2C11 3.10457 10.1046 4 9 4C7.89543 4 7 3.10457 7 2C7 0.89543 7.89543 0 9 0C10.1046 0 11 0.89543 11 2Z" fill="#141414"/>
+                                    <path d="M4 2C4 3.10457 3.10457 4 2 4C0.89543 4 0 3.10457 0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2Z" fill="#141414"/>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Berglunds snabbköp</td>
+                        <td>Christina Berglund</td>
+                        <td class="d-flex flex-aic flex-jcnd">
+                            <div class="btn btn--secondary btn--dots">
+                                <svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 2C18 3.10457 17.1046 4 16 4C14.8954 4 14 3.10457 14 2C14 0.89543 14.8954 0 16 0C17.1046 0 18 0.89543 18 2Z" fill="#141414"/>
+                                    <path d="M11 2C11 3.10457 10.1046 4 9 4C7.89543 4 7 3.10457 7 2C7 0.89543 7.89543 0 9 0C10.1046 0 11 0.89543 11 2Z" fill="#141414"/>
+                                    <path d="M4 2C4 3.10457 3.10457 4 2 4C0.89543 4 0 3.10457 0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2Z" fill="#141414"/>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="font-bold">
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                    <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                    </tr>
+                    <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                    </tr>
+                </table>
+
+                <button class="btn btn--primary">Загрузить еще</button>
+                <button class="btn btn--secondary">Загрузить еще</button>
+                
+                <div class="pagination mt-20px">
+                    <div class="pagination__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 5L9 12L16 19" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="pagination__item active">1</div>
+                    <div class="pagination__item">2</div>
+                    <div class="pagination__item">3</div>
+                    <div class="pagination__item">4</div>
+                    <div class="pagination__item">
+                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L8 8L1 15" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <ul class="list list--decimal mt-20px">
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+
+                <ul class="list list--decimal-zero">
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+
+                <ul class="list">
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+{% endblock %}

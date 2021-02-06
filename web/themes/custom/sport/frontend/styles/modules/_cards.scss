@@ -1,0 +1,279 @@
+.link-card {
+  display: block;
+  color: unset;
+  &__title,
+  &__zoom {
+    transition: 0.3s all ease;
+  }
+
+  &:hover {
+    color: unset;
+    text-decoration: none;
+    .link-card__title {
+      color: $c-blue-1;
+    }
+
+    .link-card__zoom {
+      transform: scale(1.08);
+    }
+  }
+}
+
+.c-card {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: $f-main-m;
+    padding: 57px 28px;
+    height: 100%;
+  }
+
+  &__icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  @include sm {
+    height: 172px;
+    &__content {
+      padding: 20px;
+    }
+  }
+}
+
+.news-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  margin: 15px 0;
+
+  &__header {
+    height: 208px;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 16px 20px;
+  }
+
+  @include sm {
+    margin: 8px 0;
+    &__header {
+      height: 161px;
+    }
+  }
+}
+
+.avatar-card {
+  background: #fff;
+  padding: 32px 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/svg/quotes.svg) no-repeat bottom left;
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: 26px;
+
+    .h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    min-width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-right: 22px;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25));
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__link {
+    @extend .link--blue;
+    @extend .text-normal;
+    font-family: $f-main-b;
+  }
+
+  &__title {
+    @extend .text-large;
+    font-family: $f-main-b;
+    margin-top: 10px;
+  }
+}
+
+.event-card {
+  padding: 36px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+
+  p {
+    text-align: center;
+    &:last-child {
+      margin-top: auto;
+    }
+  }
+
+  &__icon {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 19px;
+    border: 1px solid $c-grey-1;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.trainer-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  padding: 15px 18px;
+  cursor: pointer;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: $c-blue-1;
+    margin-bottom: 13px;
+  }
+
+  &__icon {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-right: 12px;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25));
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.active {
+    border: 1px solid $c-blue-1;
+  }
+}
+
+.gallery-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  height: 320px;
+  color: #fff;
+
+  &__content {
+    padding: 24px 30px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .h3 {
+    max-width: 410px;
+    margin: 0;
+    color: #fff;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include lg {
+    height: 200px;
+    &__content {
+      padding: 20px;
+    }
+  }
+
+  @include sm {
+    height: 155px;
+    &__content {
+      padding: 20px;
+    }
+  }
+}

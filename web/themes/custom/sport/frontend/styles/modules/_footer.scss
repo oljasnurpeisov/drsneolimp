@@ -1,0 +1,55 @@
+.footer {
+  padding: 34px 0 50px;
+  p {
+    max-width: 375px;
+  }
+
+  &__left {
+    padding-right: 90px !important;
+  }
+
+  &__right {
+    @include md-min {
+      border-left: 1px solid $c-grey-3;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -9.5px;
+    font-weight: 600;
+    @include md {
+      display: none;
+    }
+    li {
+      margin: 7px 9.5px;
+    }
+  }
+
+  &__contacts {
+    font-weight: 600;
+    margin-left: 14px;
+    p {
+      max-width: 308px;
+    }
+
+    @include lg {
+      margin: 0;
+    }
+  }
+
+  @include lg {
+    padding: 17px 0 20px 0;
+    &__left {
+      padding-right: 15px !important;
+    }
+  }
+}

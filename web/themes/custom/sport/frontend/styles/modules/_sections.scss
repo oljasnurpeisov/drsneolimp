@@ -1,0 +1,57 @@
+.section {
+  padding: 63px 0;
+
+  &__btn {
+    margin-top: 24px;
+    @include sm-min {
+      display: none;
+    }
+
+    @include xs {
+      width: 100%;
+    }
+  }
+
+  &--main-news {
+    padding: 0 !important;
+  }
+
+  &--sport-kinds {
+  }
+
+  &--news {
+    .section__btn {
+      margin-top: 9px;
+    }
+  }
+
+  &--plans {
+  }
+
+  &--trainers {
+  }
+
+  &--gallery {
+  }
+
+  &--sport {
+    .h2 {
+      margin-top: 44px;
+    }
+
+    .news {
+      margin-bottom: 14px;
+    }
+
+    .trainer-card {
+    }
+  }
+
+  @include sm {
+    padding: 28px 0;
+
+    &--sport-kinds {
+      padding: 73px 0 28px 0;
+    }
+  }
+}

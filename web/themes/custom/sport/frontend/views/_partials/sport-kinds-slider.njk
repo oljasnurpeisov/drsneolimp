@@ -1,0 +1,31 @@
+<div class="swiper-block">
+    <div class="swiper--sport-kinds">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for i in range(10) %}
+                    <a href="sport.html" class="swiper-slide link-card c-card">
+                        <img class="c-card__img link-card__zoom" src="images/img.png" alt="preview">
+                        <div class="c-card__content">
+                            <div class="c-card__icon">
+                                <img src="images/svg/karate.svg" alt="icon">
+                            </div>
+                            <p>#Бүркітші</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="swiper-btns swiper-btns--sport-kinds">
+        <div class="swiper-btn swiper-btn-prev">
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.52152 11.8759C6.60315 11.9586 6.7052 12 6.81745 12C6.9297 12 7.03175 11.9586 7.11338 11.8759C7.27666 11.7103 7.27666 11.4414 7.11338 11.2759L1.90902 6L7.11338 0.724138C7.27666 0.558621 7.27666 0.289655 7.11338 0.124138C6.95011 -0.0413793 6.68479 -0.0413793 6.52152 0.124138L1.02122 5.7C0.857943 5.86552 0.857943 6.13448 1.02122 6.3L6.52152 11.8759V11.8759Z" fill="#141414"/>
+            </svg>
+        </div>
+        <div class="swiper-btn swiper-btn-next">
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.47848 11.8759C1.39685 11.9586 1.2948 12 1.18255 12C1.0703 12 0.968253 11.9586 0.886616 11.8759C0.723342 11.7103 0.723342 11.4414 0.886616 11.2759L6.09098 6L0.886616 0.724138C0.723342 0.558621 0.723342 0.289655 0.886616 0.124138C1.04989 -0.0413793 1.31521 -0.0413793 1.47848 0.124138L6.97878 5.7C7.14206 5.86552 7.14206 6.13448 6.97878 6.3L1.47848 11.8759V11.8759Z" fill="#141414"/>
+            </svg>
+        </div>
+    </div>
+</div>

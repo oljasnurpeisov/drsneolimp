@@ -1,0 +1,23 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      css/theme/print.css: { media: print }
+      web/styles/vendor.min.css: {}
+      web/styles/main.min.css: {}
+  js:
+  #   js/modernizr.js: {}
+  #   js/build/scripts.js: {}
+  # dependencies:
+  #   - core/drupal
+  #   - core/jquery
+
+  # Uncomment the code above to load scripts.js file on all pages. This file also requires JQuery to be
+  # loaded on all pages. Consider implimenting your scripts through theme libraries if you wish to
+  # avoid this. https://www.drupal.org/developing/api/8/assets
+
+tabs:
+  version: VERSION
+  css:
+    component:
+      css/components/tabs.css: {}

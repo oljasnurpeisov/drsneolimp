@@ -1,0 +1,20 @@
+name: Sport
+type: theme
+description: 'HTML5, SASS, Responsive grid starter theme.'
+package: Other
+base theme: false
+core_version_requirement: ^8.8 || ^9
+
+libraries:
+  - sport/global
+
+regions:
+  header: Header
+  help: Help
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

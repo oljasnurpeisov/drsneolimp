@@ -1,0 +1,33 @@
+{% set page = 'contacts' %}
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+    <main class="main main--contacts">
+        <div class="container">
+            <ul class="crumbs">
+                <li>
+                    <a href="">Главная</a>
+                </li>
+                <li>
+                    <a href="">Контакты</a>
+                </li>
+            </ul>
+
+            <section>
+                <h1 class="h1">Контакты</h1>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="yandex-map-contacts" data-coordinates="43.245784838545, 76.94864294071115"></div>
+                    </div>
+                    <div class="col-md-4 font-bold mt-md-27px">
+                        <p class="mb-10px">Наши контакты</p>
+                        <p class="mb-18px">010000 г. Нур-Султан  Кургальжинское шоссе 13Б, 3 этаж</p>
+                        <p class="mb-13px text-large">8 (7172) 67-71-84</p>
+                        <p>zhiger.sk@mail.ru</p>
+                        <button class="btn btn--primary btn--blue mt-15px">Написать нам</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock %}

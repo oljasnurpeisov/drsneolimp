@@ -1,0 +1,29 @@
+.link {
+  &--blue {
+    color: $c-blue-1;
+
+    &:hover {
+      color: $c-blue-1;
+    }
+  }
+
+  &--dark {
+    color: $c-primary;
+
+    &:hover {
+      color: $c-primary;
+    }
+  }
+
+  &--unstyled {
+    color: unset;
+    &:hover {
+      color: unset;
+      text-decoration: none;
+    }
+  }
+
+  &.active {
+    color: $c-blue-1;
+  }
+}

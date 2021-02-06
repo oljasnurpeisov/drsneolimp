@@ -1,0 +1,40 @@
+.h1,
+h1 {
+  font-size: 42px;
+  line-height: 61px;
+  font-family: $f-main-b;
+  margin-bottom: 11px;
+  @include sm {
+    font-size: 32px;
+    line-height: 46px;
+  }
+}
+
+.h2,
+h2 {
+  font-size: 32px;
+  line-height: 46px;
+  font-family: $f-main-b;
+  margin-bottom: 18px;
+  @include sm {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.h3,
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $f-main-b;
+  margin-bottom: 18px;
+  @include md {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @include sm {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
