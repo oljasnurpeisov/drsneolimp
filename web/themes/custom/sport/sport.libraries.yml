@@ -7,9 +7,8 @@ global:
       css/custom.css: {}
       web/styles/main.min.css: {}
   js:
-  #  web/scripts/main.min.js: {}
-    frontend/scripts/main/main.js: {}
-  #   web/scripts/vendor.min.js: {}
+    web/scripts/vendor.min.js: {}
+    web/scripts/main.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal

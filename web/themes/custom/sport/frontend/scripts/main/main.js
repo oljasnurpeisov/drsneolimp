@@ -1,7 +1,7 @@
 "use strict";
 import initSlider from "./sliders";
 
-$(function () {
+(function ($) {
   initSlider();
 
   $(".map-collapse").on("shown.bs.collapse", function (e) {
@@ -183,4 +183,4 @@ $(function () {
     maxHeight: 320
   });
   //select end
-});
+}(jQuery));
