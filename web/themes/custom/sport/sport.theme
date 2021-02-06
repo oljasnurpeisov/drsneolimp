@@ -53,3 +53,15 @@ function sport_preprocess_field(&$variables, $hook) {
   // Make additional variables available to the template.
   $variables['bundle'] = $variables['element']['#bundle'];
 }
+
+/**
+ * Prepares variables for the page.html.twig template.
+ */
+function sport_preprocess_page(array &$variables) {
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $variables['node'] = $node;
+  }
+}

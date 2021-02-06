@@ -156,10 +156,10 @@ $(function () {
     onChange: function (option, checked, select) {
     },
     onDropdownShow: function(event) {
-      
+
     },
     onDropdownHide: function(event) {
-      
+
     },
     buttonText: function(options, select) {
       if (options.length == 0) {
@@ -171,7 +171,7 @@ $(function () {
           var selected = '';
           options.each(function() {
             var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).html();
-            
+
             selected += label + ', ';
           });
           return selected.substr(0, selected.length - 2);

@@ -1,0 +1,10 @@
+.lang-list li a {
+  color: unset;
+}
+.lang-list li a:hover {
+  text-decoration: none;
+}
+.lang-list li.is-active {
+  font-weight: 600;
+  color: #141414;
+}

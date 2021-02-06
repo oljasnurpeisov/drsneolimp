@@ -1,30 +1,22 @@
 {% set main_menu = page.primary_menu|render %}
 {% set secondary_menu = page.secondary_menu|render %}
-<div{{ attributes.addClass(
-  'layout-container',
-  main_menu or secondary_menu ? 'with-navigation',
-  secondary_menu ? 'with-subnav'
-) }}>
-
-  <!-- ______________________ HEADER _______________________ -->
+<article>
 
   {% if page.header %}
-    <header id="header">
+    <header class="header" id="header">
       <div class="container">
-        <div id="header-region">
-          {{ page.header }}
+        <div class="header__logo-wrapper">
+          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="header__logo">
+            <img src="{{ base_path ~ directory }}/web/images/icons/logo-1.svg" alt="{{ site_name }}">
+            <img src="{{ base_path ~ directory }}/web/images/icons/logo-2.png" alt="{{ site_name }}">
+            <span class="ml-7px">{{ site_name }}</span>
+          </a>
         </div>
+        {{ page.header }}
+        {% include '@sport/layout/mobile-menu.html.twig' %}
+
       </div>
     </header><!-- /#header -->
-  {% endif %}
-
-  {% if main_menu or secondary_menu %}
-    <nav id="navigation" class="menu{% if main_menu %} with-primary{% endif %}{% if secondary_menu %} with-secondary{% endif %}">
-      <div class="container">
-        {{ main_menu }}
-        {{ secondary_menu }}
-      </div>
-    </nav><!-- /#navigation -->
   {% endif %}
 
   <!-- ______________________ MAIN _______________________ -->
@@ -95,4 +87,4 @@
     </footer><!-- /#footer -->
   {% endif %}
 
-</div><!-- /.layout-container -->
+</article><!-- /.layout-container -->

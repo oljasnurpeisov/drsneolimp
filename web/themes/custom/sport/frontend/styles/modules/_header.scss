@@ -1,15 +1,26 @@
 .header {
-  padding: 15px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__logo-wrapper {
     display: flex;
     align-items: center;
     font-weight: 600;
-    max-width: 476px;
     margin-right: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    @include xl {
+      max-width: 500px;
+    }
   }
 
   &__logo-secondary {
@@ -39,11 +50,14 @@
     li {
       margin: 0 9.5px;
       white-space: nowrap;
+      &:nth-child(n + 5) {
+        display: none;
+      }
     }
   }
 
   @include xl {
-    padding: 12px 60px;
+    padding: 12px 0;
 
     &__nav,
     &__lang {
@@ -59,7 +73,6 @@
   }
 
   @include sm {
-    padding: 12px 15px;
     &__logo {
       img {
         &:nth-child(1) {
@@ -145,7 +158,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: url(../../images/svg/mobile-menu-bg.svg) no-repeat center /
+    background: url(../images/svg/mobile-menu-bg.svg) no-repeat center /
       cover;
     width: 100%;
     height: 100%;

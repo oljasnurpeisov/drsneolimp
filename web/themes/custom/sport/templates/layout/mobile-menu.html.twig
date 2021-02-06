@@ -1,0 +1,24 @@
+<div class="mobile-menu">
+  {# Get menu items #}
+  {% set items = simplify_menu('main') %}
+
+  {# Iterate menu tree #}
+  <nav class="mobile-menu__inner">
+    <ul class="mobile-menu__list">
+      {% for menu_item in items.menu_tree %}
+        <li>
+          <a class="link link--unstyled" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="social">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="mr-35px">
+        <img src="{{ base_path ~ directory }}/web/images/svg/youtube.svg" alt="youtube"> </a>
+      <a href="https://www.facebook.com/zhigerastana.kz" target="_blank" rel="noopener noreferrer" class="mr-35px">
+        <img src="{{ base_path ~ directory }}/web/images/svg/facebook.svg" alt="facebook"> </a>
+      <a href="https://www.instagram.com/drs.neolimp/" target="_blank" rel="noopener noreferrer">
+        <img src="{{ base_path ~ directory }}/web/images/svg/instagram.svg" alt="instagram"> </a>
+    </div>
+    {{ drupal_block('language_block:language_interface', wrapper=false) }}
+  </nav>
+</div>
