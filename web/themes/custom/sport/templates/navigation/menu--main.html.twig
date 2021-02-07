@@ -34,7 +34,14 @@
           <ul class="menu list list--unstyled header__nav">
           {% for item in items %}
             <li>
-              {{ link(item.title, item.url, { 'class':['link link--unstyled']}) }}
+              {%
+                set link_classes = [
+                  'link',
+                  'link--unstyled',
+                  item.in_active_trail ? 'active',
+                ]
+              %}
+              {{ link(item.title, item.url, {'class': link_classes}) }}
               {% if item.below %}
                 {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
               {% endif %}

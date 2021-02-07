@@ -77,14 +77,6 @@
 
   <!-- ______________________ FOOTER _______________________ -->
 
-  {% if page.footer|render %}
-    <footer id="footer">
-      <div class="container">
-        <div id="footer-region">
-          {{ page.footer }}
-        </div>
-      </div>
-    </footer><!-- /#footer -->
-  {% endif %}
+  {% include '@sport/layout/footer.html.twig' %}
 
 </article><!-- /.layout-container -->

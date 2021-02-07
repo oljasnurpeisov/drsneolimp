@@ -1,0 +1,59 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 footer__left">
+        <div class="footer__row">
+          <div class="d-flex flex-aic">
+            <a href="main.html" class="mr-17px">
+              <img src="{{ base_path ~ directory }}/web/images/icons/logo-1.svg" alt="{{ site_name }}">
+            </a>
+            <p class="font-bold">{{ site_name }}</p>
+          </div>
+          <div class="c-hidden-lg">{{ drupal_block('language_block:language_interface', wrapper=false) }}</div>
+          <img src="{{ base_path ~ directory }}/web/images/icons/logo-2.png" alt="{{ site_name }}" class="ml-10px c-hidden-lg">
+        </div>
+        {% set items = simplify_menu('main') %}
+
+        {# Iterate menu tree #}
+        <nav>
+          <ul class="list list--unstyled footer__nav">
+            {% for menu_item in items.menu_tree %}
+              <li>
+                {%
+                  set link_classes = [
+                    'link',
+                    'link--unstyled',
+                    menu_item.active_trail ? 'active',
+                  ]
+                %}
+                <a{{ attributes.addClass(link_classes) }} href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <div class="d-flex flex-jcsb flex-aic">
+          {% set developYear = 2021 %}
+          {% set currentYear = "now"|date("Y") %}
+          <p class="text-normal mt-20px c-hidden-lg">&copy; {{ currentYear >  developYear ? "#{developYear} - #{currentYear}" : currentYear }} {% trans %}All rights reserved{% endtrans %}</p>
+          <div class="social c-hidden-lg">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="mr-14px">
+              <img src="{{ base_path ~ directory }}/web/images/svg/youtube.svg" alt="youtube"> </a>
+            <a href="https://www.facebook.com/zhigerastana.kz" target="_blank" rel="noopener noreferrer" class="mr-14px">
+              <img src="{{ base_path ~ directory }}/web/images/svg/facebook.svg" alt="facebook"> </a>
+            <a href="https://www.instagram.com/drs.neolimp" target="_blank" rel="noopener noreferrer">
+              <img src="{{ base_path ~ directory }}/web/images/svg/instagram.svg" alt="instagram"> </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 footer__right">
+        <div class="footer__contacts">
+          <p class="mb-10px">Наши контакты</p>
+          <p class="mb-18px">010000 г. Нур-Султан Кургальжинское шоссе 13Б, 3 этаж</p>
+          <p class="mb-13px">8 (7172) 67-71-84</p>
+          <a class="link link--unstyled" href="mailto:zhiger.sk@mail.ru">zhiger.sk@mail.ru</a>
+        </div>
+        <p class="text-normal mt-29px c-show-lg">&copy; {{ currentYear >  developYear ? "#{developYear} - #{currentYear}" : currentYear }} {% trans %}All rights reserved{% endtrans %}</p>
+      </div>
+    </div>
+  </div>
+</footer>
