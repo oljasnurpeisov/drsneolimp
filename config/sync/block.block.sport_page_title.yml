@@ -1,0 +1,20 @@
+uuid: 0a149a01-7219-4676-b69c-4a6bfa4016ba
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - sport
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: sport_page_title
+theme: sport
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок страницы'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Фильтрле
+          reset_button_label: Ысыру
+      fields:
+        filename:
+          label: Аты
+        filesize:
+          label: Көлем
+        status:
+          label: Жағдайы
+      filters:
+        status:
+          expose:
+            label: Жағдайы
+  page_2:
+    display_options:
+      arguments:
+        fid:
+          exception:
+            title: Барлық

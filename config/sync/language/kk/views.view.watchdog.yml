@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Фильтрле
+          reset_button_label: Ысыру
+      fields:
+        severity:
+          label: Қауіптілік
+        type:
+          label: Тип
+        timestamp:
+          label: Датасы
+        message:
+          label: Хабарлама
+        name:
+          label: Пайдаланушы
+        link:
+          label: Операциялар
+      filters:
+        type:
+          expose:
+            label: Тип
+        severity:
+          expose:
+            label: Қауіптілік
+      empty:
+        area:
+          admin_label: 'Жазба жоқ.'
+          content: 'Жазба жоқ.'
+  page:
+    display_title: Бет

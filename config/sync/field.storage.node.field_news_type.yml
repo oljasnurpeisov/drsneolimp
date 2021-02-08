@@ -1,0 +1,27 @@
+uuid: 0dce3b69-12e5-43cd-b581-63fbb7348e54
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_news_type
+field_name: field_news_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: news
+      label: Новости
+    -
+      value: announcements
+      label: Анонс
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

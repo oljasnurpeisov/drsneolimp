@@ -1,0 +1,26 @@
+uuid: fc76a5a5-0bf4-4c54-9d0d-9644dc057899
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sport
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: sport_breadcrumbs
+theme: sport
+region: content
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Строка навигации'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

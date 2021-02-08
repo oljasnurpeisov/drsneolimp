@@ -1,0 +1,21 @@
+uuid: 164f1917-5502-4c26-905f-ad6187c103e1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_range
+    - node.type.news
+  module:
+    - datetime_range
+id: node.news.field_date_range
+field_name: field_date_range
+entity_type: node
+bundle: news
+label: 'Даты мероприятия'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

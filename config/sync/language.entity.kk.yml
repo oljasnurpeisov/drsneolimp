@@ -1,0 +1,9 @@
+uuid: 59b0d8f8-f361-4139-a94f-b8618ed144f4
+langcode: kk
+status: true
+dependencies: {  }
+id: kk
+label: Қаз
+direction: ltr
+weight: -10
+locked: false

@@ -1,0 +1,23 @@
+uuid: 931b2983-824e-4c31-b055-6112fca323d6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_type
+    - node.type.news
+  module:
+    - options
+id: node.news.field_news_type
+field_name: field_news_type
+entity_type: node
+bundle: news
+label: Тип
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: news
+default_value_callback: ''
+settings: {  }
+field_type: list_string

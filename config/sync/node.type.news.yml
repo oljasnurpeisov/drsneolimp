@@ -1,0 +1,17 @@
+uuid: 11addcbd-c37b-4a86-b87b-cbe5828fa966
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Новости
+type: news
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

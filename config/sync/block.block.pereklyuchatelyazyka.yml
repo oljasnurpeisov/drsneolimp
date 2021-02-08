@@ -1,0 +1,20 @@
+uuid: 251a4dfc-dab3-4441-b524-cbacfa76cb53
+langcode: ru
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - sport
+id: pereklyuchatelyazyka
+theme: sport
+region: header
+weight: -5
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Переключатель языка'
+  provider: language
+  label_display: '0'
+visibility: {  }

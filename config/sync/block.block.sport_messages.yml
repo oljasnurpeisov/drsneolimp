@@ -1,0 +1,22 @@
+uuid: f34c4de0-e1bb-42d3-82dd-59119d016db8
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sport
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: sport_messages
+theme: sport
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Системные сообщения'
+  provider: system
+  label_display: '0'
+visibility: {  }

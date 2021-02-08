@@ -3,7 +3,7 @@ langcode: ru
 status: true
 dependencies: {  }
 id: ru
-label: Russian
+label: Рус
 direction: ltr
-weight: 0
+weight: -9
 locked: false

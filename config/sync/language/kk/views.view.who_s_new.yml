@@ -1,0 +1,13 @@
+label: 'Кім жаңа?'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ысыру
+      title: 'Кім жаңа?'
+  block_1:
+    display_title: 'Кім жаңа?'
+    display_options:
+      block_description: 'Кім жаңа?'
+      block_category: Пайдаланушы

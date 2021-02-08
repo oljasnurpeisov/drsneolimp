@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ысыру
+      filters:
+        access:
+          expose:
+            label: 'Соңғы қатынас'
+            description: 'Пайдаланушы соңғы бетті көргеннен кейін осынша уақытқа онлайн болып саналады.'
+      title: 'Кім онлайн'
+  who_s_online_block:
+    display_title: 'Кім онлайн'
+    display_options:
+      block_description: 'Кім онлайн'

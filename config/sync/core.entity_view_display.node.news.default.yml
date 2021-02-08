@@ -1,0 +1,44 @@
+uuid: 24bedb97-266e-441a-acc1-8dcbb88508e3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_date_range
+    - field.field.node.news.field_news_type
+    - field.field.node.news.field_photos
+    - node.type.news
+  module:
+    - image
+    - text
+    - user
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_photos:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_date_range: true
+  field_news_type: true
+  langcode: true

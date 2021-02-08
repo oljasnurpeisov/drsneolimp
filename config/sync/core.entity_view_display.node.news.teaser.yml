@@ -1,0 +1,25 @@
+uuid: 782b13ad-561b-4c5e-bc02-a7b2d7f4f599
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.body
+    - field.field.node.news.field_date_range
+    - field.field.node.news.field_news_type
+    - field.field.node.news.field_photos
+    - node.type.news
+  module:
+    - user
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content: {  }
+hidden:
+  body: true
+  field_date_range: true
+  field_news_type: true
+  field_photos: true
+  langcode: true
+  links: true

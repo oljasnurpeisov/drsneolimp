@@ -1,0 +1,22 @@
+uuid: 64c25b78-9de8-4022-8bdb-71cd46e7b921
+langcode: ru
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - sport
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: sport_help
+theme: sport
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Справка
+  provider: help
+  label_display: '0'
+visibility: {  }
