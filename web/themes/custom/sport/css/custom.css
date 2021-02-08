@@ -8,3 +8,8 @@
   font-weight: 600;
   color: #141414;
 }
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: unset;
+  left: unset;
+  width: unset;
+}

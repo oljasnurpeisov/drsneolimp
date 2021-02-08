@@ -97,7 +97,7 @@ p {
     transform: translate(0, -50%);
     width: 12px;
     height: 12px;
-    background: url(../../images/svg/eye.svg) no-repeat center;
+    background: url(../images/svg/eye.svg) no-repeat center;
     background-size: 100%;
   }
 }
@@ -320,7 +320,7 @@ figure {
   li {
     margin: 0 6px;
     cursor: pointer;
-    
+
     &.active {
       font-weight: 600;
       color: $c-primary;
@@ -379,7 +379,7 @@ figure {
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s all ease;
-    
+
     &.active {
       border-color: $c-blue-1;
     }

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news.field_date_range
     - field.field.node.news.field_news_type
     - field.field.node.news.field_photos
+    - field.field.node.news.field_sport_kinds
     - node.type.news
   module:
     - user
@@ -15,7 +16,15 @@ id: node.news.teaser
 targetEntityType: node
 bundle: news
 mode: teaser
-content: {  }
+content:
+  field_sport_kinds:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
 hidden:
   body: true
   field_date_range: true

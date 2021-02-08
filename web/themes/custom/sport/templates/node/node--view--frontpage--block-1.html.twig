@@ -1,0 +1,12 @@
+{# Create classes array. The 'node' class is required for contextual edit links. #}
+
+{# BEM inspired class syntax: https://en.bem.info/
+   Enable this code if you would like node classes like "article article--layout-teaser", where article is the content type and teaser is the view mode.
+#}
+<a href="{{ url }}" class="news-list__item">
+  <p class="news-list__item__info">{{ node.created.value|format_date('medium') }}
+    <span class="eye ml-10px">620</span>
+  </p>
+  <p class="news-list__item__title">{{ label }}</p>
+  <p class="news-list__item__tag">#{{ content.field_sport_kinds|render|striptags }}</p>
+</a>
