@@ -1,0 +1,29 @@
+uuid: f5ca5f6c-617e-46e6-81b0-34039cec7cb7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.main_page_tags
+  module:
+    - system
+    - views
+  theme:
+    - sport
+id: main_page_tags
+theme: sport
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:main_page_tags-block_1'
+settings:
+  id: 'views_block:main_page_tags-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

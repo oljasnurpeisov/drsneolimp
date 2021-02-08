@@ -1,0 +1,16 @@
+uuid: b9f208f0-cb13-4bae-acd4-647bf93538af
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sport_kinds
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.sport_kinds
+target_entity_type_id: taxonomy_term
+target_bundle: sport_kinds
+default_langcode: site_default
+language_alterable: true

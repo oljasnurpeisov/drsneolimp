@@ -21,14 +21,10 @@
 
   <!-- ______________________ MAIN _______________________ -->
 
-  <div id="main">
+  <div class="main main-general">
+    <img src="{{ base_path ~ directory }}/web/images/svg/main-page-bg.svg" alt="background-image" class="bg">
     <div class="container">
-      <div id="content-wrapper">
-        <section id="content">
-
           <div id="content-header">
-
-            {{ page.breadcrumb }}
 
             {% if page.highlighted|render %}
               <div id="highlighted">{{ page.highlighted }}</div>
@@ -57,8 +53,6 @@
             {{ page.content }}
           </div>
 
-        </section><!-- /#content -->
-
         {% if page.sidebar_first|render %}
           <aside id="sidebar-first" class="column sidebar first">
             {{ page.sidebar_first }}
@@ -71,7 +65,6 @@
           </aside><!-- /#sidebar-second -->
         {% endif %}
 
-      </div><!-- /#content-wrapper -->
     </div><!-- /.container -->
   </div><!-- /#main -->
 

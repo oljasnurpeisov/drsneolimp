@@ -1,0 +1,8 @@
+uuid: aa440b0d-c740-491b-b7b3-f06cabfe0e87
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Виды спорта'
+vid: sport_kinds
+description: ''
+weight: 0
