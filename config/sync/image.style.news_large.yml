@@ -1,0 +1,15 @@
+uuid: 013e1455-b56c-4c23-8d14-209e4a711789
+langcode: ru
+status: true
+dependencies: {  }
+name: news_large
+label: 'news_large (1666 x Y)'
+effects:
+  f1a76076-05cc-4ee9-b39a-22e1e52220a6:
+    uuid: f1a76076-05cc-4ee9-b39a-22e1e52220a6
+    id: image_scale
+    weight: 1
+    data:
+      width: 1666
+      height: null
+      upscale: false

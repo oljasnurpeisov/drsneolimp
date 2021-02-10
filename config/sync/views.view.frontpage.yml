@@ -7,6 +7,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_photos
     - field.storage.node.field_sport_kinds
+    - image.style.news_large
     - node.type.news
   module:
     - image
@@ -645,7 +646,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: news_large
             image_link: ''
           group_column: ''
           group_columns: {  }
