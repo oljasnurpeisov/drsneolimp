@@ -13,3 +13,23 @@
   left: unset;
   width: unset;
 }
+.tn-link {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+.tn-hidden {
+  display: none;
+}
+.swiper--news .swiper-btn-wrapper .swiper-btn{
+    transition: 0.2s; /* Время эффекта */
+   }
+.swiper--news .swiper-btn-wrapper .swiper-btn:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}

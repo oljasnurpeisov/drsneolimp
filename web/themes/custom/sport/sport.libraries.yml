@@ -2,7 +2,7 @@ global:
   version: VERSION
   css:
     theme:
-      css/theme/print.css: { media: print }
+      # css/theme/print.css: { media: print }
       web/styles/vendor.min.css: {}
       css/custom.css: {}
       web/styles/main.min.css: {}

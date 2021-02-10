@@ -8,5 +8,7 @@
     <span class="eye ml-10px">620</span>
   </p>
   <p class="news-list__item__title">{{ label }}</p>
-  <p class="news-list__item__tag">#{{ content.field_sport_kinds|render|striptags }}</p>
+  {% if content.field_sport_kinds|render %}
+    <p class="news-list__item__tag">#{{ content.field_sport_kinds|render|striptags }}</p>
+  {% endif %}
 </a>
