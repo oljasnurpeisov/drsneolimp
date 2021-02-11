@@ -24,7 +24,8 @@
     set classes = [
       'main',
       is_front ? 'main-general',
-      route_name == 'view.sport_kinds.page_1' ? 'main--sport-kinds'
+      route_name == 'view.sport_kinds.page_1' ? 'main--sport-kinds',
+      route_name == 'view.news.page_1' ? 'main--news'
     ]
   %}
   <div{{ attributes.addClass(classes) }}>
