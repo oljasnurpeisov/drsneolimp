@@ -31,6 +31,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/simplify_menu": "^2.1",
         "drupal/twig_tweak": "^3.0",
+        "drupal/views_infinite_scroll": "^1.7",
         "drupal/youtube": "^1.2",
         "drush/drush": "^10.3",
         "vlucas/phpdotenv": "^5.1",
