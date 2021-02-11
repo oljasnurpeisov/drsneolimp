@@ -1,0 +1,4 @@
+drsneolimp:
+  version: 1.x
+  js:
+    js/drsneolimp.js: {}

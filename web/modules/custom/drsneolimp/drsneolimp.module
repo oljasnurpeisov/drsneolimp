@@ -28,6 +28,11 @@ function drsneolimp_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $for
      break;
  }
 }
+
 function news_type_change($form, \Drupal\Core\Form\FormStateInterface &$form_state) {
   return $form;
+}
+
+function drsneolimp_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'drsneolimp/drsneolimp';
 }
