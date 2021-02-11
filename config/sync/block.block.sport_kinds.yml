@@ -1,22 +1,22 @@
-uuid: f5ca5f6c-617e-46e6-81b0-34039cec7cb7
+uuid: be6d81f8-536a-4dc0-9fea-09b9e1c7db0b
 langcode: ru
 status: true
 dependencies:
   config:
-    - views.view.main_page_tags
+    - views.view.sport_kinds
   module:
     - system
     - views
   theme:
     - sport
-id: main_page_tags
+id: sport_kinds
 theme: sport
 region: content
-weight: 0
+weight: 2
 provider: null
-plugin: 'views_block:main_page_tags-block_1'
+plugin: 'views_block:sport_kinds-block_1'
 settings:
-  id: 'views_block:main_page_tags-block_1'
+  id: 'views_block:sport_kinds-block_1'
   label: ''
   provider: views
   label_display: '0'

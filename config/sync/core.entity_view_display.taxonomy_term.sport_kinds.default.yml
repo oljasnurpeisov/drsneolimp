@@ -1,0 +1,22 @@
+uuid: caa3d625-8d13-49ef-bf53-fe7b65185931
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sport_kinds
+  module:
+    - text
+id: taxonomy_term.sport_kinds.default
+targetEntityType: taxonomy_term
+bundle: sport_kinds
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -9,7 +9,7 @@ _core:
 id: sport_page_title
 theme: sport
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

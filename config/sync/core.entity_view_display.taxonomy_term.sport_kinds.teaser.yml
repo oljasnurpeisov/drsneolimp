@@ -1,0 +1,15 @@
+uuid: c8a4c414-82df-4469-9c34-f3dac4c5e461
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - taxonomy.vocabulary.sport_kinds
+id: taxonomy_term.sport_kinds.teaser
+targetEntityType: taxonomy_term
+bundle: sport_kinds
+mode: teaser
+content: {  }
+hidden:
+  description: true
+  langcode: true
