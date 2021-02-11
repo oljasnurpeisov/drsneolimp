@@ -21,6 +21,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^2.4",
         "drupal/basic": "^2.0",
+        "drupal/better_exposed_filters": "^5.0@beta",
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/core-recommended": "^9.0",
         "drupal/date_range_formatter": "9.0.x-dev@dev",
@@ -88,6 +89,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/core": {
+                "taxonomy view mode tempaltes": "https://www.drupal.org/files/issues/core-theme-suggestion-for-taxonomy-view-modes-2767243-14.patch"
+            }
         }
     }
 }
