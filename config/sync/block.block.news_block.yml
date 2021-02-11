@@ -1,0 +1,29 @@
+uuid: 906fc28c-2d35-4119-bab7-31c4771f5e86
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - system
+    - views
+  theme:
+    - sport
+id: news_block
+theme: sport
+region: content
+weight: 3
+provider: null
+plugin: 'views_block:news-block_1'
+settings:
+  id: 'views_block:news-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

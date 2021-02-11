@@ -1,0 +1,10 @@
+uuid: 208057b6-1cb9-4f45-8e94-87b15f0ff438
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.large_teaser
+label: 'Анонс расширенный'
+targetEntityType: node
+cache: true
