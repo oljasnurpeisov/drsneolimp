@@ -53,7 +53,7 @@
   <div class="news__right news-list">
     {{ drupal_view('frontpage', 'block_1') }}
     <div class="news-list__link">
-      <a href="news.html" class="link link--blue">Все новости</a>
+      {{ drupal_link('All news'|t, path('view.news.page_1'), {attributes: {class: 'link link--blue'}}) }}
     </div>
   </div>
 </div>

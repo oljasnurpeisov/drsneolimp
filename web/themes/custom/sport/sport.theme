@@ -65,3 +65,12 @@ function sport_preprocess_page(array &$variables) {
     $variables['node'] = $node;
   }
 }
+
+/**
+ * Implements hook_system_breadcrumb_alter().
+ */
+function sport_preprocess_breadcrumb(&$variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $variables['node'] = $node;
+  }
+}

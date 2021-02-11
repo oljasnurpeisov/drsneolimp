@@ -74,3 +74,6 @@ a.ui-button:active,
 #views-exposed-form-sport-kinds-page-1 {
   width: 100%;
 }
+.crumbs li:last-child {
+  pointer-events: visible!important;
+}
