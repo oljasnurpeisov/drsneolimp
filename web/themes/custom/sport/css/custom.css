@@ -77,3 +77,9 @@ a.ui-button:active,
 .crumbs li:last-child {
   pointer-events: visible!important;
 }
+.views-infinite-scroll-content-wrapper {
+  display: contents;
+}
+ul.js-pager__items {
+  list-style-type: none;
+}
