@@ -32,6 +32,12 @@
  * @ingroup themeable
  */
 #}
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
   {{ title_suffix }}
@@ -42,11 +48,17 @@
     </header>
   {% endif %}
 
-  {{ exposed }}
+  {% if exposed %}
+    <div class="input-block mb-30px">
+  		{{ exposed }}
+  	</div>
+  {% endif %}
   {{ attachment_before }}
 
   {% if rows -%}
-    {{ rows }}
+    <div class="row">
+      {{ rows }}
+    </div>
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
@@ -62,3 +74,4 @@
   {% endif %}
 
   {{ feed_icons }}
+</div>

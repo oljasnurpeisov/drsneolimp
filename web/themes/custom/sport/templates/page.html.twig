@@ -20,9 +20,15 @@
   {% endif %}
 
   <!-- ______________________ MAIN _______________________ -->
-
-  <div class="main main-general">
-    <img src="{{ base_path ~ directory }}/web/images/svg/main-page-bg.svg" alt="background-image" class="bg">
+  {%
+    set classes = [
+      'main',
+      is_front ? 'main-general',
+      route_name == 'view.sport_kinds.page_1' ? 'main--sport-kinds'
+    ]
+  %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if is_front %}<img src="{{ base_path ~ directory }}/web/images/svg/main-page-bg.svg" alt="background-image" class="bg">{% endif %}
     <div class="container">
           <div id="content-header">
 
