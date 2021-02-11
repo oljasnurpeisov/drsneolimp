@@ -7,7 +7,15 @@
     <ul class="mobile-menu__list">
       {% for menu_item in items.menu_tree %}
         <li>
-          <a class="link link--unstyled" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+          {% set mobile_menu_links = create_attribute() %}
+          {%
+            set link_classes = [
+              'link',
+              'link--unstyled',
+              menu_item.active_trail ? 'active',
+            ]
+          %}
+          <a{{ mobile_menu_links.addClass(link_classes) }} href="{{ menu_item.url }}">{{ menu_item.text }}</a>
         </li>
       {% endfor %}
     </ul>

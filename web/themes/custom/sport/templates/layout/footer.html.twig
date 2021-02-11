@@ -19,6 +19,7 @@
           <ul class="list list--unstyled footer__nav">
             {% for menu_item in items.menu_tree %}
               <li>
+                {% set menu_links = create_attribute() %}
                 {%
                   set link_classes = [
                     'link',
@@ -26,7 +27,7 @@
                     menu_item.active_trail ? 'active',
                   ]
                 %}
-                <a{{ attributes.addClass(link_classes) }} href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+                <a{{ menu_links.addClass(link_classes) }} href="{{ menu_item.url }}">{{ menu_item.text }}</a>
               </li>
             {% endfor %}
           </ul>
