@@ -100,6 +100,7 @@ ul.js-pager__items {
 .change_value:hover {
   text-decoration: underline;
 }
-#views-exposed-form-news-page-1 {
+#views-exposed-form-news-page-1,
+#views-exposed-form-announcements-page-1 {
   display: none;
 }
