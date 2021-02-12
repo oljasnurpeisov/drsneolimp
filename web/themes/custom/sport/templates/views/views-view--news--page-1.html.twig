@@ -55,17 +55,17 @@
   {% endif %}
   {{ attachment_before }}
 
-  {% if rows -%}
-    <div class="row mt-15px">
-      <div class="col-lg-8 col-md-12">
-        <div class="row">
+  <div class="row mt-15px">
+    <div class="col-lg-8 col-md-12">
+      <div class="row">
+        {% if rows -%}
           {{ rows }}
-        </div>
+        {% elseif empty -%}
+          {{ empty }}
+        {% endif %}
       </div>
     </div>
-  {% elseif empty -%}
-    {{ empty }}
-  {% endif %}
+  </div>
   {{ pager }}
 
   {{ attachment_after }}

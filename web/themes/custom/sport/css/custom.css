@@ -94,3 +94,12 @@ ul.js-pager__items {
   position: relative;
   z-index: 2;
 }
+.change_value {
+  cursor: pointer;
+}
+.change_value:hover {
+  text-decoration: underline;
+}
+#views-exposed-form-news-page-1 {
+  display: none;
+}
