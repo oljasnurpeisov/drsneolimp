@@ -1,0 +1,10 @@
+uuid: da9d5ce3-14bb-4961-a593-bd9804b23cf3
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.announcements_teaser
+label: 'Анонс мероприятии'
+targetEntityType: node
+cache: true

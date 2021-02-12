@@ -1,9 +1,9 @@
-uuid: 377b2c6d-0c8d-4dfe-8057-0abf21bedf29
+uuid: cd6f7bf8-a196-4a1a-83e6-79d08f738388
 langcode: ru
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.large_teaser
+    - core.entity_view_mode.node.announcements_teaser
     - node.type.news
     - system.menu.main
     - taxonomy.vocabulary.sport_kinds
@@ -14,8 +14,8 @@ dependencies:
     - taxonomy
     - user
     - views_infinite_scroll
-id: news
-label: Новости
+id: announcements
+label: 'Планируемые мероприятия'
 module: views
 description: ''
 tag: ''
@@ -44,7 +44,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Применить
           reset_button: false
@@ -53,13 +53,36 @@ display:
           expose_sort_order: true
           sort_asc_label: 'По возрастанию'
           sort_desc_label: 'По убыванию'
+          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Дополнительные настройки'
+              secondary_open: false
+            filter:
+              field_sport_kinds_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
       pager:
-        type: mini
+        type: infinite_scroll
         options:
-          items_per_page: 6
+          items_per_page: 8
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Элементов на страницу'
@@ -68,20 +91,20 @@ display:
             items_per_page_options_all_label: '- Все -'
             offset: false
             offset_label: Пропустить
-          tags:
-            previous: ‹‹
-            next: ››
+          views_infinite_scroll:
+            button_text: 'Показать ещё'
+            automatically_load_content: false
       style:
         type: default
         options:
-          row_class: 'col-md-6 col-sm-12'
+          row_class: 'col-lg-3 col-md-4 col-sm-6 mb-30px mb-sm-16px'
           default_row_class: false
           uses_fields: false
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: large_teaser
+          view_mode: announcements_teaser
       fields:
         title:
           id: title
@@ -156,6 +179,47 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_news_type_value:
+          id: field_news_type_value
+          table: node__field_news_type
+          field: field_news_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            announcements: announcements
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
         langcode:
           id: langcode
           table: node_field_data
@@ -198,291 +262,6 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
-        field_news_type_value:
-          id: field_news_type_value
-          table: node__field_news_type
-          field: field_news_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            news: news
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: Новости
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Блок
-    position: 1
-    display_options:
-      display_extenders: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 6
-          offset: 0
-      defaults:
-        pager: false
-        use_more: false
-        use_more_always: false
-        use_more_text: false
-      use_more: true
-      use_more_always: true
-      use_more_text: 'Все новости'
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: news
-      menu:
-        type: normal
-        title: Новости
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
-      pager:
-        type: infinite_scroll
-        options:
-          items_per_page: 8
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Элементов на страницу'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- Все -'
-            offset: false
-            offset_label: Пропустить
-          views_infinite_scroll:
-            button_text: 'Показать ещё'
-            automatically_load_content: false
-      defaults:
-        pager: false
-        use_ajax: false
-        filters: false
-        filter_groups: false
-        exposed_form: false
-      use_ajax: true
-      exposed_form:
-        type: bef
-        options:
-          submit_button: Применить
-          reset_button: false
-          reset_button_label: Сбросить
-          exposed_sorts_label: 'Сортировать по'
-          expose_sort_order: true
-          sort_asc_label: 'По возрастанию'
-          sort_desc_label: 'По убыванию'
-          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
-          text_input_required_format: full_html
-          bef:
-            general:
-              autosubmit: true
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
-              autosubmit_hide: true
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Дополнительные настройки'
-              secondary_open: false
-            filter:
-              field_sport_kinds_target_id:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            news: news
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-        field_news_type_value:
-          id: field_news_type_value
-          table: node__field_news_type
-          field: field_news_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            news: news
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
         field_sport_kinds_target_id:
           id: field_sport_kinds_target_id
           table: node__field_sport_kinds
@@ -528,12 +307,61 @@ display:
           limit: true
           vid: sport_kinds
           hierarchy: false
-          error_message: false
+          error_message: true
           plugin_id: taxonomy_index_tid
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Планируемые мероприятия'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+      use_ajax: true
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: announcements
+      menu:
+        type: normal
+        title: 'Планируемые мероприятия'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 2
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

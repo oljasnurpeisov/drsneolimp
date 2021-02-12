@@ -12,7 +12,7 @@ dependencies:
 id: sport_kinds
 theme: sport
 region: content
-weight: 2
+weight: 1
 provider: null
 plugin: 'views_block:sport_kinds-block_1'
 settings:
