@@ -1,0 +1,73 @@
+{# Create classes array. The 'node' class is required for contextual edit links. #}
+{% set classes = [
+  'node'
+] %}
+
+{# BEM inspired class syntax: https://en.bem.info/
+   Enable this code if you would like node classes like "article article--layout-teaser", where article is the content type and teaser is the view mode.
+{% set classes = classes|merge([
+  node.bundle|clean_class,
+  view_mode ? node.bundle|clean_class ~ '--layout-' ~ view_mode|clean_class
+]) %}
+{% set title_classes = [
+  node.bundle|clean_class ~ '__title'
+] %}
+#}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
+    <header>
+      {{ title_prefix }}
+      {% if not page and label %}
+        <h2{{ title_attributes.addClass(title_classes) }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
+      {{ title_suffix }}
+
+      {% if display_submitted %}
+        <div class="submitted">
+          {{ author_picture }}
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      {% endif %}
+
+      {% if not node.published %}
+        <p class="node--unpublished">{{ 'Unpublished'|t }}</p>
+      {% endif %}
+    </header>
+  {% endif %}
+  {% set date = content.field_news_type == 'announcements' ? content.field_news_type :  node.created.value|format_date('medium') %}
+  <div{{ content_attributes.addClass('row') }}>
+    <div class="col-md-8">
+      {% if content.field_photos[0] %}
+        <img src="{{ content.field_photos[0]['#item'].entity.uri.value | image_style('news_large') }}" class="rounded-image mb-30px">
+      {% endif %}
+      <p class="text-small mb-12px">{{ content.field_date_range|render ? content.field_date_range|render|striptags : node.created.value|format_date('medium') }}<span class="eye ml-10px">{{ node_view_count ?? 0 }}</span></p>
+      <div class="content">
+        {{ content|without('links', 'field_news_type', 'field_date_range', 'field_photos', 'field_sport_kinds') }}
+      </div>
+      <p class="text-small mb-28px">
+      {% if content.field_sport_kinds|render %}
+        #{{ content.field_sport_kinds|render|striptags }}
+      {% endif %}
+      </p>
+      {% if content.field_photos[1] %}
+        {% for key, item in content.field_photos if key|first != '#' %}
+          {% if key != 0 %}
+            <img src="{{ file_url(item['#item'].entity.uri.value | image_style('news_large')) }}" class="rounded-image mb-30px">
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div><!-- /.content -->
+
+  {% if content.links %}
+    <div class="links">
+      {{ content.links }}
+    </div><!-- /.links -->
+  {% endif %}
+
+</article><!-- /.node -->

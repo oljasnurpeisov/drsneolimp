@@ -104,3 +104,8 @@ ul.js-pager__items {
 #views-exposed-form-announcements-page-1 {
   display: none;
 }
+.more-link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
