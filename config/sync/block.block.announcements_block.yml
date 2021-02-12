@@ -1,0 +1,29 @@
+uuid: 3fa4b305-26f9-4a89-a278-d6501c755da4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.announcements
+  module:
+    - system
+    - views
+  theme:
+    - sport
+id: announcements_block
+theme: sport
+region: content
+weight: 3
+provider: null
+plugin: 'views_block:announcements-block_1'
+settings:
+  id: 'views_block:announcements-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
