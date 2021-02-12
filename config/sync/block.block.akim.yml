@@ -1,0 +1,30 @@
+uuid: 2276f0e7-ad7a-43e5-a216-16cc86670657
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f214eb25-c5c3-4af1-915e-866b898f386c'
+  module:
+    - block_content
+    - system
+  theme:
+    - sport
+id: akim
+theme: sport
+region: sidebar
+weight: -5
+provider: null
+plugin: 'block_content:f214eb25-c5c3-4af1-915e-866b898f386c'
+settings:
+  id: 'block_content:f214eb25-c5c3-4af1-915e-866b898f386c'
+  label: Аким
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

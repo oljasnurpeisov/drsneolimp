@@ -83,3 +83,14 @@ a.ui-button:active,
 ul.js-pager__items {
   list-style-type: none;
 }
+.clear-link a {
+  color: unset!important;
+}
+.avatar-card:before {
+  background: url(../web/images/svg/quotes.svg) no-repeat bottom left!important;
+  z-index: 1;
+}
+.avatar-card a {
+  position: relative;
+  z-index: 2;
+}

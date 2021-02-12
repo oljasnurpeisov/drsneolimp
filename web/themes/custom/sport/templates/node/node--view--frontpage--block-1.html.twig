@@ -17,7 +17,7 @@
 <article{{ attributes.addClass(classes) }}>
   <a href="{{ url }}" class="news-list__item">
     <p class="news-list__item__info">{{ node.created.value|format_date('medium') }}
-      <span class="eye ml-10px">620</span>
+      <span class="eye ml-10px">{{ node_view_count ?? 0 }}</span>
     </p>
     <p class="news-list__item__title">{{ label }}</p>
     {% if content.field_sport_kinds|render %}

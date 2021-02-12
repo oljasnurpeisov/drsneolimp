@@ -76,7 +76,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '#{{ name }} '
+            text: '<span class="clear-link">#{{ name }}</span>'
             make_link: false
             path: ''
             absolute: false
@@ -116,7 +116,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true

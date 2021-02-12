@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\statistics\StatisticsViewsResult;
 
 /**
  * Prepares variables for the html.html.twig template.
@@ -63,6 +64,16 @@ function sport_preprocess_page(array &$variables) {
   $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $variables['node'] = $node;
+  }
+}
+
+/**
+ * Implements hook_system_node_alter().
+ */
+function sport_preprocess_node(&$variables) {
+  $statistics = \Drupal::service('statistics.storage.node')->fetchView($variables['node']->id());
+  if ($statistics) {
+    $variables['node_view_count'] = $statistics->getTotalCount();
   }
 }
 

@@ -1,0 +1,30 @@
+uuid: 755fd555-a19f-4f14-b8b1-913eccf76cee
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:499d93e9-e412-4b9d-b5a3-46635cb8b59c'
+  module:
+    - block_content
+    - system
+  theme:
+    - sport
+id: prezident
+theme: sport
+region: sidebar
+weight: -6
+provider: null
+plugin: 'block_content:499d93e9-e412-4b9d-b5a3-46635cb8b59c'
+settings:
+  id: 'block_content:499d93e9-e412-4b9d-b5a3-46635cb8b59c'
+  label: Президент
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

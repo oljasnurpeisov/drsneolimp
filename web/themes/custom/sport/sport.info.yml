@@ -15,6 +15,5 @@ regions:
   page_bottom: 'Page bottom'
   highlighted: Highlighted
   content: Content
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
+  sidebar: 'Sidebar'
   footer: Footer
