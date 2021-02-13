@@ -1,0 +1,30 @@
+uuid: 90383f7c-23f8-48f4-8c28-205d603e3e9d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - system
+    - views
+  theme:
+    - sport
+id: news_related
+theme: sport
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:news-related_news'
+settings:
+  id: 'views_block:news-related_news'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/news/*'
+    negate: false
