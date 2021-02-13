@@ -78,6 +78,15 @@ function sport_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements hook_system_node_alter().
+ */
+function sport_preprocess_views_view(&$variables) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $variables['current_page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+}
+
+/**
  * Implements hook_system_breadcrumb_alter().
  */
 function sport_preprocess_breadcrumb(&$variables) {

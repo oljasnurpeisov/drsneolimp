@@ -27,9 +27,10 @@
       route_name == 'view.sport_kinds.page_1' ? 'main--sport-kinds',
       route_name == 'view.news.page_1' ? 'main--news',
       route_name == 'view.announcements.page_1' ? 'main--events',
+      route_name == 'entity.taxonomy_term.canonical' ? 'main--sport',
     ]
   %}
-  <div{{ attributes.addClass(classes) }}>
+  <main{{ attributes.addClass(classes) }}>
     {% if is_front %}<img src="{{ base_path ~ directory }}/web/images/svg/main-page-bg.svg" alt="background-image" class="bg">{% endif %}
     <div class="container">
           <div id="content-header">
@@ -62,7 +63,7 @@
           </div>
 
     </div><!-- /.container -->
-  </div><!-- /#main -->
+  </main><!-- /#main -->
 
   <!-- ______________________ FOOTER _______________________ -->
 
