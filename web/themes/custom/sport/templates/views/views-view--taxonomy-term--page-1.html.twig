@@ -56,7 +56,7 @@
     {% endif %}
     {{ attachment_before }}
     {% if rows -%}
-    {% set title = current_page_title|render|striptags %}
+      {% set title = current_page_title|render|striptags %}
       <h2 class="h2">
         {% trans %}
           #{{ title }} news

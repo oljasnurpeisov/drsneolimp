@@ -84,6 +84,14 @@ function sport_preprocess_views_view(&$variables) {
   $request = \Drupal::request();
   $route_match = \Drupal::routeMatch();
   $variables['current_page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    // If the database is not yet available, set default values for these
+    // variables.
+    $variables['is_front'] = FALSE;
+  }
 }
 
 /**
