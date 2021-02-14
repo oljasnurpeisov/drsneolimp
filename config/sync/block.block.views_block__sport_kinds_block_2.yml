@@ -1,29 +1,30 @@
-uuid: b1ebd94e-4608-4c34-a13b-d13488580d61
+uuid: 12e18909-d320-412e-ab80-e2553624478a
 langcode: ru
 status: true
 dependencies:
   config:
-    - views.view.filter_tags
+    - views.view.sport_kinds
   module:
     - system
     - views
   theme:
     - sport
-id: filter_tags
+id: views_block__sport_kinds_block_2
 theme: sport
 region: content
-weight: -3
+weight: 3
 provider: null
-plugin: 'views_block:filter_tags-block_1'
+plugin: 'views_block:sport_kinds-block_2'
 settings:
-  id: 'views_block:filter_tags-block_1'
+  id: 'views_block:sport_kinds-block_2'
   label: ''
   provider: views
   label_display: '0'
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
   request_path:
     id: request_path
-    pages: "/news\r\n/announcements"
+    pages: '/sportkinds/*'
     negate: false

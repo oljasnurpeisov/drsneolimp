@@ -699,6 +699,7 @@ display:
           not: false
           plugin_id: numeric
       title: 'Планируемые мероприятия по #'
+      block_description: 'Планируемые мероприятия по #'
     cache_metadata:
       max-age: -1
       contexts:
