@@ -11,7 +11,7 @@ _core:
 id: sport_breadcrumbs
 theme: sport
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: system_breadcrumb_block
 settings:

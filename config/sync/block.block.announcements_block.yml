@@ -12,7 +12,7 @@ dependencies:
 id: announcements_block
 theme: sport
 region: content
-weight: 3
+weight: 2
 provider: null
 plugin: 'views_block:announcements-block_1'
 settings:

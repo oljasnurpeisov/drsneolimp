@@ -254,7 +254,21 @@ display:
           entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
-      sorts: {  }
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_revision
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
       title: 'Виды спорта'
       header: {  }
       footer: {  }

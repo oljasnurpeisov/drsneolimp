@@ -12,7 +12,7 @@ dependencies:
 id: main_page_tags
 theme: sport
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: 'views_block:main_page_tags-block_1'
 settings:
