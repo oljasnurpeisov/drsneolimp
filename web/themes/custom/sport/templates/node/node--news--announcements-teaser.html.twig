@@ -19,7 +19,8 @@
 
   <a{{ attributes.addClass(classes) }} href="{{ url }}">
     <div class="event-card__icon">
-      {% set preview = (content.field_photos[0]) ? content.field_photos[0]['#item'].entity.uri.value | image_style('news_large') : 'images/img.png' %}
+      {% set icon_path = "/" ~ base_path ~ directory ~ "/img/logo.svg" %}
+      {% set preview = (content.field_photos[0]) ? content.field_photos[0]['#item'].entity.uri.value | image_style('news_large') : icon_path %}
       <img src="{{ preview }}" alt="icon">
     </div>
     <p class="text-normal mb-9px">{{ content.field_date_range|render|striptags }}</p>

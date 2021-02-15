@@ -28,10 +28,10 @@
   {{ title_prefix }}
   {% if name and not page %}
     <a href="{{ url }}" class="swiper-slide c-card link-card">
-      <img class="c-card__img link-card__zoom" src="/{{ base_path ~ directory }}/web/images/sportkinds/{{ term.id }}.png" alt="preview">
+      <img class="c-card__img link-card__zoom" src="/{{ base_path ~ directory }}/img/sportkinds/{{ term.id }}.png" alt="preview">
       <div class="c-card__content">
         <div class="c-card__icon">
-          <img src="/{{ base_path ~ directory }}/web/images/sportkinds/svg/{{ term.id }}.svg" alt="icon"> </div>
+          <img src="/{{ base_path ~ directory }}/img/sportkinds/svg/{{ term.id }}.svg" alt="icon"> </div>
         <p>#{{ name|render|striptags }}</p>
       </div>
     </a>
