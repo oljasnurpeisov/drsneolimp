@@ -32,8 +32,8 @@
  * @ingroup themeable
  */
 #}
-<section class="section">
-  {% if rows -%}
+{% if rows -%}
+  <section class="section">
     {% set title = current_page_title|render|striptags %}
     <h2 class="h2">
       {% trans %}
@@ -68,19 +68,19 @@
         </div>
       </div>
     </div>
-  {% elseif empty -%}
-    {{ empty }}
-  {% endif %}
-  {{ pager }}
-  {{ more }}
-  {{ attachment_after }}
+    {{ pager }}
+    {{ more }}
+    {{ attachment_after }}
 
 
-  {% if footer %}
-    <footer>
-      {{ footer }}
-    </footer>
-  {% endif %}
+    {% if footer %}
+      <footer>
+        {{ footer }}
+      </footer>
+    {% endif %}
 
-  <button class="section__btn btn btn--secondary">{{ more }}</button>
-</section>
+    <button class="section__btn btn btn--secondary">{{ more }}</button>
+  </section>
+{% elseif empty -%}
+  {{ empty }}
+{% endif %}
