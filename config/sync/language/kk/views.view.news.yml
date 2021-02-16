@@ -1,0 +1,20 @@
+display:
+  page_1:
+    display_options:
+      menu:
+        title: Жаңалықтар
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Тағы көрсету'
+  related_news:
+    display_options:
+      use_more_text: 'Барлық жаңалықтар'
+  default:
+    display_title: Жаңалықтар
+    display_options:
+      title: Жаңалықтар
+  block_1:
+    display_options:
+      use_more_text: 'Барлық жаңалықтар'
+label: Жаңалықтар

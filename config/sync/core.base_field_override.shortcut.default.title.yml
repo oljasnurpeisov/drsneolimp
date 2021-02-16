@@ -1,0 +1,18 @@
+uuid: d0e04185-6a9a-4fb8-a855-3133856234c2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - shortcut.set.default
+id: shortcut.default.title
+field_name: title
+entity_type: shortcut
+bundle: default
+label: Название
+description: 'Название ярлыка.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

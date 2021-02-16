@@ -1,0 +1,18 @@
+uuid: 962b9924-481c-4623-8516-1e42f0180e1f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.changed
+field_name: changed
+entity_type: user
+bundle: user
+label: Изменение
+description: 'Время, когда пользователя последний раз редактировали.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

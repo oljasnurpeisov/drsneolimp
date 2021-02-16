@@ -1,18 +1,18 @@
-uuid: b9f208f0-cb13-4bae-acd4-647bf93538af
+uuid: 60d2f3fc-02ba-44a5-94d8-e4b83fe29f92
 langcode: ru
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.sport_kinds
+    - comment.type.comment
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.sport_kinds
-target_entity_type_id: taxonomy_term
-target_bundle: sport_kinds
+id: comment.comment
+target_entity_type_id: comment
+target_bundle: comment
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

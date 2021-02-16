@@ -1,9 +1,9 @@
-uuid: 7eceb043-209f-45a9-90c6-fd326a9f993f
+uuid: cf18af4b-8c64-4196-9717-dfec19aa6b04
 langcode: ru
 status: true
 dependencies:
   config:
-    - node.type.news
+    - block_content.type.basic
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: node.news
-target_entity_type_id: node
-target_bundle: news
-default_langcode: current_interface
+id: block_content.basic
+target_entity_type_id: block_content
+target_bundle: basic
+default_langcode: site_default
 language_alterable: true
