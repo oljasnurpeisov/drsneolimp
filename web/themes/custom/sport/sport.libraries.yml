@@ -8,6 +8,7 @@ global:
       web/styles/main.min.css: {}
   js:
     web/scripts/vendor.min.js: {}
+    https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=57b8a9f7-1e77-44cd-a96c-c886976b5166: {}
     web/scripts/main.min.js: {}
   dependencies:
     - core/jquery

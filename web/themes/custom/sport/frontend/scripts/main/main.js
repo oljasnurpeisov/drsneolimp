@@ -122,7 +122,7 @@ import initSlider from "./sliders";
     const params = {
       el: yandexMapContacts.get(0),
       coordinates: yandexMapContacts.attr("data-coordinates").split(","),
-      iconImageHref: "images/svg/map-tip-main.svg",
+      iconImageHref: "/themes/custom/sport/web/images/svg/map-tip-main.svg",
       zoom: 13,
       iconImageSize: [54, 54],
       iconImageOffset: [-27, 0],
