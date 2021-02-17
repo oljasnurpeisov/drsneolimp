@@ -1,6 +1,11 @@
 p {
   margin-bottom: 0;
 }
+.p-block {
+  p {
+    margin-bottom: 1rem;
+  }
+}
 
 .news {
   border-radius: 12px;
@@ -31,6 +36,10 @@ p {
   background: #fff;
   position: relative;
   max-height: 540px;
+  &__inner {
+    overflow-y: scroll;
+    height: 100%;
+  }
   &__item {
     display: block;
     border-bottom: 1px solid $c-grey-2;
