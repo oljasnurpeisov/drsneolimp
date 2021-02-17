@@ -17,7 +17,7 @@
 #}
   <a{{ attributes.addClass(classes) }} href="{{ url }}">
     <div class="news-card__header">
-      {% set icon_path = "/" ~ base_path ~ directory ~ "/img/news.svg" %}
+      {% set icon_path = "/" ~ base_path ~ directory ~ "/img/news_default.svg" %}
       {% set preview = (content.field_photos[0]) ? content.field_photos[0]['#item'].entity.uri.value | image_style('news_large') : icon_path %}
       <img src="{{ preview }}" alt="news-preview" class="link-card__zoom">
     </div>
