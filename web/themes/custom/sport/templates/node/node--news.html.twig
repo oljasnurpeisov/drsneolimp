@@ -40,7 +40,7 @@
     </header>
   {% endif %}
   {% set date = content.field_news_type == 'announcements' ? content.field_news_type :  node.created.value|format_date('medium') %}
-  <div{{ content_attributes.addClass('row') }}>
+  <div{{ content_attributes.addClass('row p-block') }}>
     <div class="col-md-8">
       {% if content.field_photos[0] %}
         <img src="{{ content.field_photos[0]['#item'].entity.uri.value | image_style('news_large') }}" class="rounded-image mb-30px">
