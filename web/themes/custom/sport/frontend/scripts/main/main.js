@@ -97,7 +97,7 @@ import initSlider from "./sliders";
             },
             {
               iconLayout: "default#imageWithContent",
-              iconImageHref: "images/svg/map-tip.svg",
+              iconImageHref: "/themes/custom/sport/web/images/svg/map-tip.svg",
               iconImageSize: [36, 36],
               iconImageOffset: [-18, 0],
               // Смещение слоя с содержимым относительно слоя с картинкой.
@@ -151,36 +151,43 @@ import initSlider from "./sliders";
   $(window).on("resize", onResize);
   //mobile burger end
 
-  //select start
-  $('#select-1').multiselect({
-    onChange: function (option, checked, select) {
-    },
-    onDropdownShow: function(event) {
-
-    },
-    onDropdownHide: function(event) {
-
-    },
-    buttonText: function(options, select) {
-      if (options.length == 0) {
-        return this.nonSelectedText;
-      } else {
-        if (options.length > this.numberDisplayed) {
-          return options.length + ' ' + this.nSelectedText;
-        } else {
-          var selected = '';
-          options.each(function() {
-            var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).html();
-
-            selected += label + ', ';
-          });
-          return selected.substr(0, selected.length - 2);
-        }
-      }
-    },
-    nSelectedText: 'выбрано',
-    nonSelectedText : '',
-    maxHeight: 320
-  });
-  //select end
 }(jQuery));
+
+(function($) {
+	Drupal.behaviors.mySelect = {
+		attach: function(context, settings) {
+      //select start
+      $("select[name='sport-kinds-select']").once().multiselect({
+        onChange: function (option, checked, select) {
+        },
+        onDropdownShow: function(event) {
+
+        },
+        onDropdownHide: function(event) {
+
+        },
+        buttonText: function(options, select) {
+          if (options.length == 0) {
+            return this.nonSelectedText;
+          } else {
+            if (options.length > this.numberDisplayed) {
+              return options.length + ' ' + this.nSelectedText;
+            } else {
+              var selected = '';
+              options.each(function() {
+                var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).html();
+
+                selected += label + ', ';
+              });
+              return selected.substr(0, selected.length - 2);
+            }
+          }
+        },
+        nSelectedText: 'выбрано',
+        nonSelectedText : '',
+        maxHeight: 320
+      });
+      //select end
+		}
+	};
+})(jQuery);

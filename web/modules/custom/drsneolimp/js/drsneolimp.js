@@ -3,6 +3,9 @@
 
   Drupal.behaviors.drsneolimp = {
     attach: function(context, settings) {
+      jQuery('body').find('#views-exposed-form-trainers-page-1').find('.form-autocomplete').on('autocompleteclose', function() {
+        $('.js-form-submit').click();
+      });
       // Remove TID's onchange.
       jQuery('body').find('#views-exposed-form-sport-kinds-page-1').find('.form-autocomplete').on('autocompleteclose', function() {
         Drupal.drsneolimp.remove_tid();

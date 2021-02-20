@@ -1,0 +1,50 @@
+{# Create classes array. The 'node' class is required for contextual edit links. #}
+{% set classes = [
+  'node',
+  'trainer-card',
+  'swiper-slide',
+  content.field_senior[0]['#markup'] ? 'active'
+] %}
+
+{# BEM inspired class syntax: https://en.bem.info/
+   Enable this code if you would like node classes like "article article--layout-teaser", where article is the content type and teaser is the view mode.
+{% set classes = classes|merge([
+  node.bundle|clean_class,
+  view_mode ? node.bundle|clean_class ~ '--layout-' ~ view_mode|clean_class
+]) %}
+{% set title_classes = [
+  node.bundle|clean_class ~ '__title'
+] %}
+#}
+
+<figure{{ attributes.addClass(classes) }}>
+
+  {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
+    <header>
+      {{ title_prefix }}
+      {{ title_suffix }}
+    </header>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('content') }}>
+    <div class="trainer-card__header">
+      <div class="trainer-card__icon">
+        {% if content.field_photo|render %}
+          {% set url = content.field_photo[0]['#item'].entity.uri.value %}
+          {% set img = file_url(url) %}
+        {% else %}
+          {% set img = "/" ~ base_path ~ directory ~ "/img/" ~ content.field_sex[0]['#markup'] ~ ".png" %}
+        {% endif %}
+        <img src="{{ img }}" alt="icon">
+      </div> {{ content.field_senior[0]['#markup'] ? 'Senior coach'|t }}
+
+    </div>
+    <p class="font-bold mb-9px">{{ label }}</p>
+    <p class="text-normal">#{{ content.field_sport_kinds|render|striptags }}</p>
+    <div class="bullets mt-12px">
+      {{ content.field_achievements }}
+    </div>
+    {{ content|without('links', 'field_senior', 'field_sport_kinds', 'field_sex', 'field_achievements', 'field_photo') }}
+  </div><!-- /.content -->
+
+</figure><!-- /.node -->

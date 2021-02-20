@@ -71,8 +71,21 @@ a.ui-button:active,
 	color: unset!important/*{fcActive}*/;
   text-decoration: none!important;
 }
-#views-exposed-form-sport-kinds-page-1 {
+#views-exposed-form-sport-kinds-page-1,
+#views-exposed-form-trainers-page-1 {
+  display: flex!important;
   width: 100%;
+  height: 100%;
+}
+#views-exposed-form-trainers-page-1 .js-form-item {
+  display: flex!important;
+}
+#views-exposed-form-trainers-page-1 .js-form-type-textfield {
+  width: 100%;
+}
+#views-exposed-form-sport-kinds-page-1 input,
+#views-exposed-form-trainers-page-1 input {
+  margin-top: 0!important;
 }
 .crumbs li:last-child {
   pointer-events: visible!important;
@@ -120,4 +133,7 @@ ul.js-pager__items {
   181.39deg
   ,transparent 30.02%,#132543 114.57%);
   z-index: 2;
+}
+.multiselect-native-select .btn-group .multiselect:before {
+  background: url(../web/images/svg/arrow-up.svg) no-repeat center!important;
 }
