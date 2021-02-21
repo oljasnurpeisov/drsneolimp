@@ -137,3 +137,6 @@ ul.js-pager__items {
 .multiselect-native-select .btn-group .multiselect:before {
   background: url(../web/images/svg/arrow-up.svg) no-repeat center!important;
 }
+.swiper--trainers .trainer-card {
+  min-height: 228px!important;
+}

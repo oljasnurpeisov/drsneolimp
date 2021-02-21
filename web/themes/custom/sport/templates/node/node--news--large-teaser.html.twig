@@ -19,6 +19,9 @@
     <div class="news-card__header">
       {% set icon_path = "/" ~ base_path ~ directory ~ "/img/news_default.svg" %}
       {% set preview = (content.field_photos[0]) ? content.field_photos[0]['#item'].entity.uri.value | image_style('news_large') : icon_path %}
+      {% if content.field_main_photo[0] %}
+        {% set preview = content.field_main_photo[0]['#item'].entity.uri.value | image_style('news_large') %}
+      {% endif %}
       <img src="{{ preview }}" alt="news-preview" class="link-card__zoom">
     </div>
     <div class="news-card__content">

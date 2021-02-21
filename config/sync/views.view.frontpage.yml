@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - core.entity_view_mode.node.teaser
+    - field.storage.node.field_main_photo
     - field.storage.node.field_photos
     - field.storage.node.field_sport_kinds
     - image.style.news_large
@@ -606,10 +607,10 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        field_photos:
-          id: field_photos
-          table: node__field_photos
-          field: field_photos
+        field_main_photo:
+          id: field_main_photo
+          table: node__field_main_photo
+          field: field_main_photo
           relationship: none
           group_type: group
           admin_label: ''
@@ -649,8 +650,8 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
-          empty: '<img src="/themes/custom/sport/web/images/main_news.svg" alt="preview">'
+          element_default_classes: true
+          empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -662,12 +663,12 @@ display:
           group_column: ''
           group_columns: {  }
           group_rows: true
-          delta_limit: 1
+          delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ''
+          separator: ', '
           field_api_classes: false
           plugin_id: field
         field_sport_kinds:
@@ -1117,6 +1118,50 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        field_main_photo_target_id:
+          id: field_main_photo_target_id
+          table: node__field_main_photo
+          field: field_main_photo_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
@@ -1133,5 +1178,5 @@ display:
         - user.permissions
       max-age: -1
       tags:
-        - 'config:field.storage.node.field_photos'
+        - 'config:field.storage.node.field_main_photo'
         - 'config:field.storage.node.field_sport_kinds'

@@ -42,21 +42,27 @@
   {% set date = content.field_news_type == 'announcements' ? content.field_news_type :  node.created.value|format_date('medium') %}
   <div{{ content_attributes.addClass('row p-block') }}>
     <div class="col-md-8">
-      {% if content.field_photos[0] %}
+      {% if content.field_main_photo[0] %}
+        <img src="{{ content.field_main_photo[0]['#item'].entity.uri.value | image_style('news_large') }}" class="rounded-image mb-30px">
+      {% elseif content.field_photos[0] %}
         <img src="{{ content.field_photos[0]['#item'].entity.uri.value | image_style('news_large') }}" class="rounded-image mb-30px">
       {% endif %}
       <p class="text-small mb-12px">{{ content.field_date_range|render ? content.field_date_range|render|striptags : node.created.value|format_date('medium') }}<span class="eye ml-10px">{{ node_view_count ?? 0 }}</span></p>
       <div class="content">
-        {{ content|without('links', 'field_news_type', 'field_date_range', 'field_photos', 'field_sport_kinds') }}
+        {{ content|without('links', 'field_news_type', 'field_date_range', 'field_main_photo', 'field_photos', 'field_sport_kinds') }}
       </div>
       <p class="text-small mb-28px">
       {% if content.field_sport_kinds|render %}
         #{{ content.field_sport_kinds|render|striptags }}
       {% endif %}
       </p>
-      {% if content.field_photos[1] %}
+      {% if content.field_photos[0] %}
         {% for key, item in content.field_photos if key|first != '#' %}
-          {% if key != 0 %}
+          {% if key == 0 %}
+            {% if content.field_main_photo[0] == true %}
+              <img src="{{ file_url(item['#item'].entity.uri.value | image_style('news_large')) }}" class="rounded-image mb-30px">
+            {% endif %}
+          {% else %}
             <img src="{{ file_url(item['#item'].entity.uri.value | image_style('news_large')) }}" class="rounded-image mb-30px">
           {% endif %}
         {% endfor %}
