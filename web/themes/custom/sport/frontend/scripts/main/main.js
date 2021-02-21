@@ -63,7 +63,7 @@ import initSlider from "./sliders";
       //select end
 
       //show map
-      $(".map-collapse").on("shown.bs.collapse", function (e) {
+      $(".map-collapse").once().on("shown.bs.collapse", function (e) {
         let mapInited = parseInt($(e.target).attr("data-map-inited"));
 
         const params = {

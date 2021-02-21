@@ -13,6 +13,7 @@ global:
   dependencies:
     - core/jquery
     - core/drupal
+    - core/jquery.once
   # Uncomment the code above to load scripts.js file on all pages. This file also requires JQuery to be
   # loaded on all pages. Consider implimenting your scripts through theme libraries if you wish to
   # avoid this. https://www.drupal.org/developing/api/8/assets
