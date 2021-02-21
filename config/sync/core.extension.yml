@@ -49,13 +49,17 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  rest: 0
+  restui: 0
   search: 0
+  serialization: 0
   shortcut: 0
   simplify_menu: 0
   sophron: 0
   statistics: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   token: 0
   toolbar: 0
@@ -63,6 +67,7 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  views_autocomplete_filters: 0
   views_infinite_scroll: 0
   views_ui: 0
   youtube: 0

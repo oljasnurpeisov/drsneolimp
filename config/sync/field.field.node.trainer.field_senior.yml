@@ -1,0 +1,23 @@
+uuid: 62d5a62b-fa01-405c-9507-74e263190279
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_senior
+    - node.type.trainer
+id: node.trainer.field_senior
+field_name: field_senior
+entity_type: node
+bundle: trainer
+label: 'Старший тренер'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

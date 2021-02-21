@@ -1,9 +1,9 @@
-uuid: abca8707-5427-4a6a-af5a-706e12111cf5
+uuid: d4957f12-be49-4294-aac7-a4e5cfc28955
 langcode: ru
 status: true
 dependencies:
   config:
-    - node.type.page
+    - taxonomy.vocabulary.achievements
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: node.page
-target_entity_type_id: node
-target_bundle: page
-default_langcode: current_interface
+id: taxonomy_term.achievements
+target_entity_type_id: taxonomy_term
+target_bundle: achievements
+default_langcode: site_default
 language_alterable: true

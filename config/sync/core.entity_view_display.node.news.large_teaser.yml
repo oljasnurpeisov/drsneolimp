@@ -6,9 +6,11 @@ dependencies:
     - core.entity_view_mode.node.large_teaser
     - field.field.node.news.body
     - field.field.node.news.field_date_range
+    - field.field.node.news.field_main_photo
     - field.field.node.news.field_news_type
     - field.field.node.news.field_photos
     - field.field.node.news.field_sport_kinds
+    - image.style.news_large
     - node.type.news
   module:
     - image
@@ -18,17 +20,26 @@ targetEntityType: node
 bundle: news
 mode: large_teaser
 content:
-  field_photos:
+  field_main_photo:
+    type: image
     weight: 0
+    region: content
     label: hidden
     settings:
-      image_style: ''
+      image_style: news_large
+      image_link: ''
+    third_party_settings: {  }
+  field_photos:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: news_large
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_sport_kinds:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link: false

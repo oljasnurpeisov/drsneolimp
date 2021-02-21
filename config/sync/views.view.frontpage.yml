@@ -525,6 +525,13 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+      pager:
+        type: some
+        options:
+          items_per_page: 8
+          offset: 0
+      defaults:
+        pager: false
     cache_metadata:
       contexts:
         - 'languages:language_content'

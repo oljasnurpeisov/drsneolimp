@@ -1,17 +1,17 @@
-uuid: 0fd603d7-821c-4f17-8a7c-b9d11368eb44
+uuid: b6316cf6-b9e5-4552-9f99-cff4c55e08e6
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_photos
+    - field.storage.node.field_main_photo
     - node.type.news
   module:
     - image
-id: node.news.field_photos
-field_name: field_photos
+id: node.news.field_main_photo
+field_name: field_main_photo
 entity_type: node
 bundle: news
-label: Фотографии
+label: 'Главное фото'
 description: ''
 required: false
 translatable: false

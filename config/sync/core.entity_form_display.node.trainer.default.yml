@@ -1,29 +1,32 @@
-uuid: f6ad9bea-06d6-4639-9dc3-db8822e85f24
+uuid: d321166f-1852-4715-ae92-727b58c28c6f
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.field.node.news.body
-    - field.field.node.news.field_date_range
-    - field.field.node.news.field_main_photo
-    - field.field.node.news.field_news_type
-    - field.field.node.news.field_photos
-    - field.field.node.news.field_sport_kinds
+    - field.field.node.trainer.body
+    - field.field.node.trainer.field_achievements
+    - field.field.node.trainer.field_address
+    - field.field.node.trainer.field_coordinates
+    - field.field.node.trainer.field_phone
+    - field.field.node.trainer.field_photo
+    - field.field.node.trainer.field_senior
+    - field.field.node.trainer.field_sex
+    - field.field.node.trainer.field_sport_kinds
     - image.style.thumbnail
-    - node.type.news
+    - node.type.trainer
   module:
-    - datetime_range
     - image
     - path
+    - telephone
     - text
-id: node.news.default
+id: node.trainer.default
 targetEntityType: node
-bundle: news
+bundle: trainer
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 13
+    weight: 17
     settings:
       rows: 9
       summary_rows: 3
@@ -33,40 +36,62 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_date_range:
-    type: daterange_default
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_main_photo:
-    weight: 12
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_news_type:
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+  field_achievements:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
-  field_photos:
+  field_address:
     weight: 14
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_coordinates:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 15
+    settings:
+      placeholder: '+77017777777'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_photo:
+    weight: 3
+    settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_senior:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sex:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_sport_kinds:
-    weight: 9
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -80,7 +105,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -88,21 +113,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 10
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 13
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -114,18 +139,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 7
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
     third_party_settings: {  }
 hidden: {  }

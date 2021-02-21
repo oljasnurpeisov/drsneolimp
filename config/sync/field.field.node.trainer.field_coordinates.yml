@@ -1,0 +1,19 @@
+uuid: 928761ed-aae7-4a16-a01b-908145f3d447
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.trainer
+id: node.trainer.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: trainer
+label: Кординаты
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

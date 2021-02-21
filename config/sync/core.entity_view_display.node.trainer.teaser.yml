@@ -1,0 +1,74 @@
+uuid: 5eee061d-ec84-4260-93be-b8befd3cd266
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.trainer.body
+    - field.field.node.trainer.field_achievements
+    - field.field.node.trainer.field_address
+    - field.field.node.trainer.field_coordinates
+    - field.field.node.trainer.field_phone
+    - field.field.node.trainer.field_photo
+    - field.field.node.trainer.field_senior
+    - field.field.node.trainer.field_sex
+    - field.field.node.trainer.field_sport_kinds
+    - node.type.trainer
+  module:
+    - image
+    - options
+    - user
+id: node.trainer.teaser
+targetEntityType: node
+bundle: trainer
+mode: teaser
+content:
+  field_achievements:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_photo:
+    type: image
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_senior:
+    type: boolean
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format: custom
+      format_custom_true: 'Старший тренер'
+      format_custom_false: ''
+    third_party_settings: {  }
+  field_sex:
+    type: list_key
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_sport_kinds:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_address: true
+  field_coordinates: true
+  field_phone: true
+  langcode: true
+  links: true

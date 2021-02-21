@@ -1,0 +1,23 @@
+uuid: c2985a20-dd9c-4a15-9499-a1638d3d0745
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.trainer
+  module:
+    - text
+id: node.trainer.body
+field_name: body
+entity_type: node
+bundle: trainer
+label: 'Краткая биография'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

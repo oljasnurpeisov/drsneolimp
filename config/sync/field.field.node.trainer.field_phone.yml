@@ -1,0 +1,21 @@
+uuid: 4161cda3-10fe-4007-a482-a50915119d98
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.trainer
+  module:
+    - telephone
+id: node.trainer.field_phone
+field_name: field_phone
+entity_type: node
+bundle: trainer
+label: Телефон
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,18 @@
+uuid: 1856dbf7-d082-4ff9-b1a1-919bdc75338a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.news
+id: node.news.created
+field_name: created
+entity_type: node
+bundle: news
+label: 'Создан в'
+description: 'Время создания материала.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

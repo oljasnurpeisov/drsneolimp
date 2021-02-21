@@ -1,22 +1,22 @@
-uuid: 12e18909-d320-412e-ab80-e2553624478a
+uuid: e991ee13-66c7-44d9-a9df-209fe7647f7b
 langcode: ru
 status: true
 dependencies:
   config:
-    - views.view.sport_kinds
+    - views.view.trainers
   module:
     - system
     - views
   theme:
     - sport
-id: views_block__sport_kinds_block_2
+id: trainers_block_2
 theme: sport
 region: content
-weight: 4
+weight: 0
 provider: null
-plugin: 'views_block:sport_kinds-block_2'
+plugin: 'views_block:trainers-block_2'
 settings:
-  id: 'views_block:sport_kinds-block_2'
+  id: 'views_block:trainers-block_2'
   label: ''
   provider: views
   label_display: '0'

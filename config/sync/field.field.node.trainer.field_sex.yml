@@ -1,0 +1,21 @@
+uuid: 2d43272c-f2a3-427f-8427-5d8e44f24527
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sex
+    - node.type.trainer
+  module:
+    - options
+id: node.trainer.field_sex
+field_name: field_sex
+entity_type: node
+bundle: trainer
+label: Пол
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

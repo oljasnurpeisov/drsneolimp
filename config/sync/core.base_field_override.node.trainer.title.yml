@@ -1,0 +1,18 @@
+uuid: fe6c6eb9-89e3-4e96-8ec3-76259c9cc663
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.trainer
+id: node.trainer.title
+field_name: title
+entity_type: node
+bundle: trainer
+label: ФИО
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

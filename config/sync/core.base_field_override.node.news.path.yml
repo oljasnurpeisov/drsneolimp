@@ -1,0 +1,20 @@
+uuid: a31f1984-1a43-47d8-b964-bced2bbda4d0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - path
+id: node.news.path
+field_name: path
+entity_type: node
+bundle: news
+label: 'Синоним URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

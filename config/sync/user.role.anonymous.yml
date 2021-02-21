@@ -12,6 +12,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'restful get get_trainer_resource'
   - 'search content'
   - 'use text format restricted_html'
   - 'view post access counter'

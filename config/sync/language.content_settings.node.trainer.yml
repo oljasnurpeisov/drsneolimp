@@ -1,9 +1,9 @@
-uuid: abca8707-5427-4a6a-af5a-706e12111cf5
+uuid: c3b28421-f0d8-46d5-aec9-935e3b8cd4cd
 langcode: ru
 status: true
 dependencies:
   config:
-    - node.type.page
+    - node.type.trainer
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: node.page
+id: node.trainer
 target_entity_type_id: node
-target_bundle: page
+target_bundle: trainer
 default_langcode: current_interface
 language_alterable: true

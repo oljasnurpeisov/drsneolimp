@@ -1,0 +1,16 @@
+label: 'Бапкерлер құрамы'
+display:
+  default:
+    display_options:
+      title: 'Бапкерлер құрамы'
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Тағы көрсету'
+  page_1:
+    display_options:
+      menu:
+        title: 'Бапкерлер құрамы'
+  block_1:
+    display_options:
+      use_more_text: 'Барлығын көру'

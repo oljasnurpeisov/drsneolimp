@@ -1,0 +1,18 @@
+uuid: cef496b3-0e96-4372-b8a5-c3b4e345add4
+langcode: ru
+status: true
+dependencies:
+  module:
+    - drsneolimp
+    - serialization
+    - user
+id: get_trainer_resource
+plugin_id: get_trainer_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

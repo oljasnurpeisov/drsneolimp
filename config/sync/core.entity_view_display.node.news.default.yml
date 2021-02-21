@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_date_range
+    - field.field.node.news.field_main_photo
     - field.field.node.news.field_news_type
     - field.field.node.news.field_photos
     - field.field.node.news.field_sport_kinds
+    - image.style.news_large
     - node.type.news
   module:
     - date_range_formatter
@@ -21,14 +23,14 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_date_range:
     type: date_range_without_time
-    weight: 3
+    weight: 4
     region: content
     label: hidden
     settings:
@@ -42,17 +44,26 @@ content:
       several_years: 'd F Y - {d} {F} {Y}'
       date_format: 'Y-m-d\TH:i:s'
     third_party_settings: {  }
-  field_photos:
+  field_main_photo:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: news_large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_photos:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: news_large
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_sport_kinds:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link: false

@@ -1,0 +1,106 @@
+uuid: 11cb47b7-9ee1-4623-9f91-67f019ab4da2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.trainer.body
+    - field.field.node.trainer.field_achievements
+    - field.field.node.trainer.field_address
+    - field.field.node.trainer.field_coordinates
+    - field.field.node.trainer.field_phone
+    - field.field.node.trainer.field_photo
+    - field.field.node.trainer.field_senior
+    - field.field.node.trainer.field_sex
+    - field.field.node.trainer.field_sport_kinds
+    - node.type.trainer
+  module:
+    - image
+    - options
+    - telephone
+    - text
+    - user
+id: node.trainer.default
+targetEntityType: node
+bundle: trainer
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_achievements:
+    weight: 103
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_address:
+    weight: 106
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_coordinates:
+    weight: 107
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 110
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_photo:
+    weight: 109
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_senior:
+    weight: 104
+    label: hidden
+    settings:
+      format: true-false
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_sex:
+    weight: 108
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_sport_kinds:
+    weight: 102
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
