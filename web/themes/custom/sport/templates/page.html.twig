@@ -70,6 +70,6 @@
 
   {% include '@sport/layout/footer.html.twig' %}
 </article><!-- /.layout-container -->
-{% if route_name == 'view.trainers.page_1' or route_name ==  'view.frontpage.page_news_teaser_large' %}
+{% if route_name == 'view.trainers.page_1' or route_name ==  'view.frontpage.page_news_teaser_large' or route_name == 'entity.taxonomy_term.canonical' %}
   {% include '@sport/layout/trainer-modal.html.twig' %}
 {% endif %}

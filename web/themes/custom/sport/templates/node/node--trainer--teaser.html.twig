@@ -41,7 +41,7 @@
 
     </div>
     <p class="font-bold mb-9px trainer-name">{{ label }}</p>
-    <p class="text-normal sport-kind">#{{ content.field_sport_kinds|render|striptags }}</p>
+    <p class="text-normal sport-kind">#{{ content.field_sport_kinds|render|striptags|trim }}</p>
     <div class="bullets mt-12px">
       {{ content.field_achievements }}
     </div>
