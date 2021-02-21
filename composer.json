@@ -29,6 +29,7 @@
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/imagemagick": "^3.1",
         "drupal/pathauto": "^1.8",
+        "drupal/restui": "^1.19",
         "drupal/simplify_menu": "^2.1",
         "drupal/twig_tweak": "^3.0",
         "drupal/views_autocomplete_filters": "^1.3",
@@ -93,6 +94,9 @@
         "patches": {
             "drupal/core": {
                 "taxonomy view mode tempaltes": "https://www.drupal.org/files/issues/core-theme-suggestion-for-taxonomy-view-modes-2767243-14.patch"
+            },
+            "drupal/restui": {
+                "rest patch": "https://www.drupal.org/files/issues/2020-11-29/restui-3185372-4.patch"
             }
         }
     }

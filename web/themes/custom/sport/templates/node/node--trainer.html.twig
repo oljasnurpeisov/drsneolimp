@@ -1,0 +1,69 @@
+{# Create classes array. The 'node' class is required for contextual edit links. #}
+{% set classes = [
+  'node'
+] %}
+
+{# BEM inspired class syntax: https://en.bem.info/
+   Enable this code if you would like node classes like "article article--layout-teaser", where article is the content type and teaser is the view mode.
+{% set classes = classes|merge([
+  node.bundle|clean_class,
+  view_mode ? node.bundle|clean_class ~ '--layout-' ~ view_mode|clean_class
+]) %}
+{% set title_classes = [
+  node.bundle|clean_class ~ '__title'
+] %}
+#}
+<article{{ attributes.addClass(classes) }}>
+  {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
+    <header>
+      {{ title_prefix }}
+      {{ title_suffix }}
+    </header>
+  {% endif %}
+  <div{{ content_attributes.addClass('content') }}>
+    <div class="d-flex flex-aic">
+      <div class="avatar-icon mr-14px">
+        {% if content.field_photo|render %}
+          {% set url = content.field_photo[0]['#item'].entity.uri.value %}
+          {% set img = file_url(url) %}
+        {% else %}
+          {% set img = "/" ~ base_path ~ directory ~ "/img/" ~ content.field_sex[0]['#markup'] ~ ".png" %}
+        {% endif %}
+        <img src="{{ img }}" alt="icon">
+      </div>
+      <div>
+        <p class="font-bold mb-3px">{{ label }}</p>
+        <p class="text-normal">#{{ content.field_sport_kinds|render|striptags }}</p>
+      </div>
+    </div>
+    <div class="details-row">
+      <div>
+        <div class="bullets font-bold text-small">
+          {{ content.field_achievements }}
+        </div>
+        <span class="text-small color-blue-1 ml-3px">{{ content.field_senior[0]['#markup'] ? 'Senior coach'|t }}</span>
+      </div>
+      <p class="details-row__phone">{{ content.field_phone|render|striptags }}</p>
+    </div>
+    <div class="mt-18px">
+      {{ content|without('links', 'field_senior', 'field_sport_kinds', 'field_sex', 'field_achievements', 'field_photo', 'field_phone', 'field_address', 'field_coordinates') }}
+    </div>
+    <div class="modal-address">
+      <span>{{ 'Адрес'|t }}:</span> {{ content.field_address|render|striptags|trim }}
+    </div>
+    {% if content.field_coordinates|render|striptags %}
+      <a class="btn btn-collapse collapsed" data-toggle="collapse" href="#map-collapse-1" role="button" aria-expanded="false" aria-controls="map-collapse-1">
+        <div class="d-flex flex-aic">
+          <img src="/{{ base_path ~ directory }}/web/images/svg/map-arrow.svg" alt="arrow-map" class="mr-7px"> {{ 'Показать на карте'|t }} </div>
+        <img src="/{{ base_path ~ directory }}/web/images/svg/arrow-down.svg" alt="arrow-down" class="mr-7px btn-collapse__arrow">
+      </a>
+      <!-- data-map-inited - yandex map is inited or not (must be 0, change to 1 after map initilizing) -->
+      <!-- data-coordinates - yandex map coordinates -->
+      <div class="collapse map-collapse" id="map-collapse-1" data-map-inited="0" data-coordinates="{{ content.field_coordinates|render|striptags|trim }}">
+        <div class="collapse__content">
+          <div class="modal-map"></div>
+        </div>
+      </div>
+    {% endif %}
+  </div><!-- /.content -->
+</article><!-- /.node -->

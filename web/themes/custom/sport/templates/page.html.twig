@@ -69,5 +69,7 @@
   <!-- ______________________ FOOTER _______________________ -->
 
   {% include '@sport/layout/footer.html.twig' %}
-
 </article><!-- /.layout-container -->
+{% if route_name == 'view.trainers.page_1' or route_name ==  'view.frontpage.page_news_teaser_large' %}
+  {% include '@sport/layout/trainer-modal.html.twig' %}
+{% endif %}

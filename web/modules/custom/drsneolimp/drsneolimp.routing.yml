@@ -1,7 +1,7 @@
 
 drsneolimp.hellopage:
-  path: '/hello'
+  path: '/get-node/{nid}'
   defaults:
-    _controller: '\Drupal\drsneolimp\Controller\HelloWorldController::helloWorld'
+    _controller: '\Drupal\drsneolimp\Controller\GetNodeController::getNode'
   requirements:
-    _permission: 'view content'
+    _permission: 'access content'

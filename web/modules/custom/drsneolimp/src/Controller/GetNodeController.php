@@ -25,7 +25,7 @@ use Drupal\Core\Controller\ControllerBase;
 /**
  * Объявляем наш класс-контроллер.
  */
-class HelloWorldController extends ControllerBase {
+class GetNodeController extends ControllerBase {
 
   /**
    * {@inheritdoc}
@@ -34,14 +34,10 @@ class HelloWorldController extends ControllerBase {
    * из данной функции содержимого для страницы, мы также должны вернуть
    * массив который спокойно пройдет через drupal_render().
    */
-  public function helloWorld() {
-    $output = array();
+  public function getNode($nid, $lang = 'ru') {
+    $trainer = \Drupal\node\Entity\Node::load($nid, 'full', $lang);
 
-    $output['#title'] = 'HelloWorld page title';
-
-    $output['#markup'] = 'Hello World!';
-
-    return $output;
+    return $trainer;
   }
 
 }

@@ -3,6 +3,7 @@
   'node',
   'trainer-card',
   'swiper-slide',
+  'get-trainer',
   content.field_senior[0]['#markup'] ? 'active'
 ] %}
 
@@ -17,7 +18,7 @@
 ] %}
 #}
 
-<figure{{ attributes.addClass(classes) }}>
+<figure{{ attributes.addClass(classes) }} data-toggle="modal" data-target="#modal--trainer">
 
   {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
     <header>
@@ -36,11 +37,11 @@
           {% set img = "/" ~ base_path ~ directory ~ "/img/" ~ content.field_sex[0]['#markup'] ~ ".png" %}
         {% endif %}
         <img src="{{ img }}" alt="icon">
-      </div> {{ content.field_senior[0]['#markup'] ? 'Senior coach'|t }}
+      </div><span class="senior">{{ content.field_senior[0]['#markup'] ? 'Senior coach'|t }}</span>
 
     </div>
-    <p class="font-bold mb-9px">{{ label }}</p>
-    <p class="text-normal">#{{ content.field_sport_kinds|render|striptags }}</p>
+    <p class="font-bold mb-9px trainer-name">{{ label }}</p>
+    <p class="text-normal sport-kind">#{{ content.field_sport_kinds|render|striptags }}</p>
     <div class="bullets mt-12px">
       {{ content.field_achievements }}
     </div>
