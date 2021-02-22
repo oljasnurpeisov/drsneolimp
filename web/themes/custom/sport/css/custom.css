@@ -80,7 +80,8 @@ a.ui-button:active,
 #views-exposed-form-trainers-page-1 .js-form-item {
   display: flex!important;
 }
-#views-exposed-form-trainers-page-1 .js-form-type-textfield {
+#views-exposed-form-trainers-page-1 .js-form-type-textfield,
+#views-exposed-form-sport-kinds-page-1 .js-form-item {
   width: 100%;
 }
 #views-exposed-form-sport-kinds-page-1 input,
