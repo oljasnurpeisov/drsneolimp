@@ -37,7 +37,7 @@
           success: response => {
             $('.map-collapse').attr('data-coordinates', response.field_coordinates.length !== 0 ? response.field_coordinates[0].value : '');
             $('.modal-body').find('.avatar-icon').find('img').attr('src', $(this).find('img').attr('src'));
-            $('.modal-body').find('.trainer-name').html($(this).find(".trainer-name span").html());
+            $('.modal-body').find('.trainer-name-modal').html($(this).find(".trainer-name span").html());
             $('.modal-body').find('.sport-kind').html($(this).find(".sport-kind").html());
             $('.modal-body').find('.bullets').html($(this).find(".bullets").html());
             $('.modal-body').find('.senior').html($(this).find(".senior").html());
@@ -57,7 +57,7 @@
         $('.map-collapse').attr('data-map-inited', 0);
         $('.map-collapse').find('.modal-map').html('');
         $('.modal-body').find('.avatar-icon').find('img').attr('src', '');
-        $('.modal-body').find('.trainer-name').html('');
+        $('.modal-body').find('.trainer-name-modal').html('');
         $('.modal-body').find('.sport-kind').html('');
         $('.modal-body').find('.bullets').html('');
         $('.modal-body').find('.senior').html('');
