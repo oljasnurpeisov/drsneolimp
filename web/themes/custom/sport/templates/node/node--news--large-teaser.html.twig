@@ -28,7 +28,7 @@
       <p class="text-small mb-2px">{{ node.created.value|format_date('medium') }}
         <span class="eye ml-10px">{{ node_view_count ?? 0 }}</span>
       </p>
-      <p class="font-bold mb-8px link-card__title">{{ label }}</p>
+      <p class="font-bold mb-8px link-card__title news-card__title">{{ label }}</p>
       <p class="text-small">
       {% if content.field_sport_kinds|render %}
         #{{ content.field_sport_kinds|render|striptags }}
