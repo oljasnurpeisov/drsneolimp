@@ -1,0 +1,19 @@
+uuid: b1d137b7-5d38-4482-becf-69627e6ce66a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.employee
+id: node.employee.field_position
+field_name: field_position
+entity_type: node
+bundle: employee
+label: Должность
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

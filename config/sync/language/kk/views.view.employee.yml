@@ -1,0 +1,9 @@
+label: Басшылық
+display:
+  default:
+    display_options:
+      title: Басшылық
+  page_1:
+    display_options:
+      menu:
+        title: Басшылық

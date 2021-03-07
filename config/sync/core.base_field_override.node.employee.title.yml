@@ -1,0 +1,18 @@
+uuid: d3549704-9645-4375-9203-71860316c4a9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.employee
+id: node.employee.title
+field_name: title
+entity_type: node
+bundle: employee
+label: ФИО
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

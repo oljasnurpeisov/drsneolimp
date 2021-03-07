@@ -1,0 +1,17 @@
+uuid: 813da53f-d560-4cfe-ad73-0245d0a2d3d7
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Сотрудник
+type: employee
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
