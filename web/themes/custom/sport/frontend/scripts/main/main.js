@@ -119,61 +119,6 @@ import initSlider from "./sliders";
         });
       }
 
-      if ($("#yandex-map-trainers").length) {
-        ymaps.ready(function () {
-          let placemarkObject;
-          let myMap;
-          let placemarksCoordinates = [
-            [43.245784838545, 76.94864294071115],
-            [43.223342794696485, 76.95543649999995],
-            [43.243519548700874, 76.94079119629849],
-          ];
-          myMap = new ymaps.Map(
-            "yandex-map-trainers",
-            {
-              center: [43.223342794696485, 76.95543649999995],
-              zoom: 12,
-            },
-            { searchControlProvider: "yandex#search" }
-          );
-
-          // Создаём макет содержимого.
-          let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-          );
-
-          placemarkObject = new Map();
-
-          for (let i = 0; i < placemarksCoordinates.length; i++) {
-            placemarkObject.set(
-              "placemark" + i,
-              new ymaps.Placemark(
-                placemarksCoordinates[i],
-                {
-                  hintContent: "",
-                  balloonContent: "",
-                  iconContent: "",
-                },
-                {
-                  iconLayout: "default#imageWithContent",
-                  iconImageHref: "/themes/custom/sport/web/images/svg/map-tip.svg",
-                  iconImageSize: [36, 36],
-                  iconImageOffset: [-18, 0],
-                  // Смещение слоя с содержимым относительно слоя с картинкой.
-                  iconContentOffset: [0, 0],
-                  // Макет содержимого.
-                  iconContentLayout: MyIconContentLayout,
-                  hideIconOnBalloonOpen: false,
-                }
-              )
-            );
-
-            const currentPlacemark = placemarkObject.get("placemark" + i);
-            myMap.geoObjects.add(currentPlacemark);
-          }
-        });
-      }
-
       const yandexMapContacts = $("#yandex-map-contacts");
       if (yandexMapContacts.length) {
         let coordinates = yandexMapContacts.attr("data-coordinates").split(",");

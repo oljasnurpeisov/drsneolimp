@@ -44,6 +44,7 @@
             $('.modal-body').find('.details-row__phone').html((response.field_phone.length !== 0) ? response.field_phone[0].value : '');
             $('.modal-body').find('.body').html((response.body.length !== 0) ? response.body[0].value : '');
             $('.modal-body').find('.modal-address').html((response.field_address.length !== 0) ? '<span>' + Drupal.t('Адрес') + ':</span> ' + response.field_address[0].value : '');
+            $('#modal--trainer').modal('show');
           },
           error: response => {
             console.log(response.respononseText);
@@ -65,6 +66,74 @@
         $('.modal-body').find('.body').html('');
         $('.modal-body').find('.modal-address').html('');
 			});
+
+      if ($("#yandex-map-trainers").once().length) {
+        ymaps.ready(function () {
+          let placemarkObject;
+          let myMap;
+          let trainers = drupalSettings.trainers;
+          console.log(trainers);
+          myMap = new ymaps.Map(
+            "yandex-map-trainers",
+            {
+              center: [51.143969, 71.435801],
+              zoom: 12,
+            },
+            { searchControlProvider: "yandex#search" }
+          );
+
+          // Создаём макет содержимого.
+          let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          );
+
+          placemarkObject = new Map();
+
+          for (let i = 0; i < trainers.length; i++) {
+            placemarkObject.set(
+              "placemark" + i,
+              new ymaps.Placemark(
+                trainers[i].coordinates,
+                {
+                  hintContent: "",
+                  balloonContent: "",
+                  iconContent: "",
+                },
+                {
+                  iconLayout: "default#imageWithContent",
+                  iconImageHref: "/themes/custom/sport/web/images/svg/map-tip.svg",
+                  iconImageSize: [36, 36],
+                  iconImageOffset: [-18, 0],
+                  // Смещение слоя с содержимым относительно слоя с картинкой.
+                  iconContentOffset: [0, 0],
+                  // Макет содержимого.
+                  iconContentLayout: MyIconContentLayout,
+                  draggable: true,
+                  hideIconOnBalloonOpen: false,
+                }
+              )
+            );
+
+            const currentPlacemark = placemarkObject.get("placemark" + i);
+            currentPlacemark.events.add('click', function (e) {
+              // $('#' + e.get('target').options._options.id).modal()
+              $("figure[data-history-node-id='" + trainers[i].id +"']").click();
+            });
+
+            myMap.geoObjects.add(currentPlacemark);
+          }
+        });
+      }
+
+      $("div.nav-tabs > a").on("shown.bs.tab", function(e) {
+        localStorage.setItem('activeTab', $(e.target).attr('href'));
+      });
+      // on load of the page: switch to the currently selected tab
+      var activeTab = localStorage.getItem('activeTab');
+      if(activeTab){
+          $('div.nav-tabs a[href="' + activeTab + '"]').tab('show');
+      }
+
     }
   };
 

@@ -36,3 +36,27 @@ function news_type_change($form, \Drupal\Core\Form\FormStateInterface &$form_sta
 function drsneolimp_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'drsneolimp/drsneolimp';
 }
+
+function drsneolimp_views_pre_render(\Drupal\views\ViewExecutable $view) {
+  if($view->id() == 'trainers'){
+    $trainers = array_map(function($value) {
+      $trainer = [
+        'id' => $value->_entity->get('nid')->value,
+        'coordinates' => explode(",", $value->_entity->get('field_coordinates')->value),
+      ];
+      return $trainer;
+    }, $view->result);
+    $view->element['#attached']['drupalSettings']['trainers'] = $trainers;
+  }
+}
+// function drsneolimp_preprocess_views_view(&$vars) {
+//   if ($vars['view_array']['#name'] == 'trainers') {
+//     foreach($vars['view']->result as $value){
+//       $trainers[] = [
+//         'id' => 'modal--trainer',
+//         'coordinates' => explode(",", $value->_entity->get('field_coordinates')->value),
+//       ];
+//     }
+//     $vars['view']->element['#attached']['drupalSettings']['trainers'] = $trainers;
+//   }
+// }

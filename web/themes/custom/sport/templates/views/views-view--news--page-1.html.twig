@@ -65,11 +65,15 @@
         {% endif %}
       </div>
     </div>
+    <div class="col-lg-4 col-md-12">
+      {{ drupal_region('sidebar') }}
+    </div>
   </div>
   {{ pager }}
 
   {{ attachment_after }}
   {{ more }}
+
 
   {% if footer %}
     <footer>
