@@ -138,3 +138,10 @@ ul.js-pager__items {
 .multiselect-native-select .btn-group .multiselect:before {
   background: url(../web/images/svg/arrow-up.svg) no-repeat center!important;
 }
+.ajax-progress-fullscreen {
+  background: url(../img/balls.gif)!important;
+  width: 120px;
+  height: 120px;
+  top: 38%;
+  left: 49%;
+}
