@@ -26,6 +26,7 @@
       });
       // Get node by id
       jQuery('body').find('.get-trainer').once().on('click', function() {
+        $("body").append('<div class="ajax-progress ajax-progress-fullscreen">&nbsp;</div>');
         var nid = $(this).attr("data-history-node-id");
         $.ajax({
           url: '/api/v1/get-trainer/' + nid + '/' + drupalSettings.path.currentLanguage,
@@ -45,6 +46,7 @@
             $('.modal-body').find('.body').html((response.body.length !== 0) ? response.body[0].value : '');
             $('.modal-body').find('.modal-address').html((response.field_address.length !== 0) ? '<span>' + Drupal.t('Адрес') + ':</span> ' + response.field_address[0].value : '');
             $('#modal--trainer').modal('show');
+            $(".ajax-progress-fullscreen").remove();
           },
           error: response => {
             console.log(response.respononseText);
@@ -72,7 +74,6 @@
           let placemarkObject;
           let myMap;
           let trainers = drupalSettings.trainers;
-          console.log(trainers);
           myMap = new ymaps.Map(
             "yandex-map-trainers",
             {
