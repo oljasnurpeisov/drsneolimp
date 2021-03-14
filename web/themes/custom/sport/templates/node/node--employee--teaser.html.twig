@@ -31,11 +31,12 @@
   <div {{ content_attributes.addClass('content leadership-card__right') }}>
     <h3 class="h3 c-hidden-md mb-12px mt-10px">{{ label }}</h3>
     <p class="mb-14px">{{ content.field_position|render|striptags|trim }}</p>
+    <span class="mb-14px">{{ content.field_birth_place|render|striptags|trim }}</span>
     {% if content.body|render %}
       {{ content.body }}
     {% endif %}
+    {{ content|without('links', 'field_position', 'field_employee_photo', 'body', 'field_birth_place') }}
   </div>
-  {{ content|without('links', 'field_position', 'field_employee_photo', 'body') }}
   {% if content.links %}
     <div class="links">
       {{ content.links }}
