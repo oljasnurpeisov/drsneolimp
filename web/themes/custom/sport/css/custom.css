@@ -149,6 +149,10 @@ ul.js-pager__items {
   height: 255px!important;
   min-width: 190px!important;
 }
+.avatar-card__title {
+  font-size: 17px!important;
+  line-height: 27px!important;
+}
 @media screen and (max-width: 768px) {
   .leadership-card__avatar {
     min-width: 150px!important;
