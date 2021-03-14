@@ -145,3 +145,7 @@ ul.js-pager__items {
   top: 38%;
   left: 49%;
 }
+.leadership-card__avatar {
+  height: 255px;
+  min-width: 190px;
+}
