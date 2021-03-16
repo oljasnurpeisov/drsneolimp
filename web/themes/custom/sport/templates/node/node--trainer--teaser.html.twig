@@ -31,8 +31,9 @@
     <div class="trainer-card__header">
       <div class="trainer-card__icon">
         {% if content.field_photo|render %}
-          {% set url = content.field_photo[0]['#item'].entity.uri.value %}
+          {% set url = content.field_photo[0]['#item'].entity.uri.value | image_style('trainer_card') %}
           {% set img = file_url(url) %}
+
         {% else %}
           {% set img = "/" ~ base_path ~ directory ~ "/img/" ~ content.field_sex[0]['#markup'] ~ ".png" %}
         {% endif %}
