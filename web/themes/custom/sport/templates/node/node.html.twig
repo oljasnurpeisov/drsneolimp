@@ -41,7 +41,18 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('content') }}>
-    {{ content|without('links') }}
+    {% if drupal_region('sidebar')|render|striptags|trim  is not empty %}
+      <div class="row">
+        <div class="col-md-8">
+          {{ content|without('links') }}
+        </div>
+        <div class="col-md-4">
+          {{ drupal_region('sidebar') }}
+        </div>
+      </div>
+    {% else %}
+      {{ content|without('links') }}
+    {% endif %}
   </div><!-- /.content -->
 
   {% if content.links %}
