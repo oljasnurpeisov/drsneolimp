@@ -162,19 +162,19 @@ ul.js-pager__items {
     left: 35%;
   }
 }
-#block-sidebar-menu--2 .hamburger {
+#block-sidebar-menu .hamburger {
   display: none;
 }
-#block-sidebar-menu--2 .header__nav {
+#block-sidebar-menu .header__nav {
   display: block!important;
   float: right;
 }
-#block-sidebar-menu--2 .header__nav li {
+#block-sidebar-menu .header__nav li {
   display: block;
   padding: 20px 40px 20px 0;
   border-bottom: 1px solid #c8cedb;
 }
-#block-sidebar-menu--2 .header__nav li:first-child {
+#block-sidebar-menu .header__nav li:first-child {
   padding-top: 0;
 }
 .page__files .file {
