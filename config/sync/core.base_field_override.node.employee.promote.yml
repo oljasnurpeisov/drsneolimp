@@ -11,7 +11,7 @@ bundle: employee
 label: 'Помещено на главную страницу'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

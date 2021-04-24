@@ -7,6 +7,10 @@ display:
         options:
           views_infinite_scroll:
             button_text: 'Тағы көрсету'
+      filters:
+        title:
+          expose:
+            placeholder: Іздеу
   page_1:
     display_options:
       menu:

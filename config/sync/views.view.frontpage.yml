@@ -188,7 +188,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 4
+          items_per_page: 1
           offset: 0
       query:
         type: views_query
@@ -615,7 +615,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -650,16 +650,15 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: image_url
           settings:
             image_style: news_large
-            image_link: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -869,7 +868,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"swiper-slide-content\">\r\n  <p class=\"text-small mb-2px\">{{ created }}\r\n                          <span class=\"eye ml-10px\">{{ totalcount }}</span>\r\n                        </p>\r\n                        <p class=\"font-bold mb-8px\">{{ title }}</p>\r\n                        <p class=\"text-small\">{{ field_sport_kinds }}</p>\r\n                      </div>\r\n"
+            text: "<img src=\"{{ field_main_photo }}\" alt=\"preview\">\r\n<div class=\"swiper-slide-content\">\r\n  <p class=\"text-small mb-2px\">{{ created }}\r\n                          <span class=\"eye ml-10px\">{{ totalcount }}</span>\r\n                        </p>\r\n                        <p class=\"font-bold mb-8px\">{{ title }}</p>\r\n                        <p class=\"text-small\">{{ field_sport_kinds }}</p>\r\n                      </div>\r\n"
             make_link: false
             path: ''
             absolute: false

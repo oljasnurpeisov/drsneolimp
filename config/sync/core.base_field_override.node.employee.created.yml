@@ -1,0 +1,18 @@
+uuid: 6272a45d-7ecc-409d-8c37-c70c3f0a4cd3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.employee
+id: node.employee.created
+field_name: created
+entity_type: node
+bundle: employee
+label: 'Создан в'
+description: 'Время создания материала.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,29 @@
+uuid: c26ebdce-ea24-49ec-b24d-3cb9fb87b351
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - sport
+id: sidebar_menu
+theme: sport
+region: sidebar
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Основная навигация'
+  provider: system
+  label_display: '0'
+  level: 2
+  depth: 1
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

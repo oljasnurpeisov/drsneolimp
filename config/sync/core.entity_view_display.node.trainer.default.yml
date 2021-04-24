@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.trainer.field_senior
     - field.field.node.trainer.field_sex
     - field.field.node.trainer.field_sport_kinds
+    - image.style.trainer_card
     - node.type.trainer
   module:
     - image
@@ -67,7 +68,7 @@ content:
     weight: 109
     label: hidden
     settings:
-      image_style: ''
+      image_style: trainer_card
       image_link: ''
     third_party_settings: {  }
     type: image

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.employee.body
+    - field.field.node.employee.field_birth_place
     - field.field.node.employee.field_employee_photo
     - field.field.node.employee.field_position
+    - image.style.large
     - node.type.employee
   module:
     - image
@@ -19,30 +21,37 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_birth_place:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_employee_photo:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_position:
-    weight: 103
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

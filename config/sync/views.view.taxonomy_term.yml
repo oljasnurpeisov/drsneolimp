@@ -395,9 +395,16 @@ display:
     display_options:
       query:
         type: views_query
-        options: {  }
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: null
       path: taxonomy/term/%
       display_extenders: {  }
+      defaults:
+        query: false
     cache_metadata:
       contexts:
         - 'languages:language_interface'

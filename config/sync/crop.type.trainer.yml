@@ -1,0 +1,12 @@
+uuid: 94eee1a8-55bf-4310-a515-8e1ae0811ea1
+langcode: ru
+status: true
+dependencies: {  }
+id: trainer
+label: trainer
+description: ''
+aspect_ratio: '1:1'
+soft_limit_width: 200
+soft_limit_height: 200
+hard_limit_width: 200
+hard_limit_height: 200

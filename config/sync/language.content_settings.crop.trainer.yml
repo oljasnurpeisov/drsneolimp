@@ -1,0 +1,11 @@
+uuid: dff4055a-a9eb-4096-b951-e25fff9dc0f1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - crop.type.trainer
+id: crop.trainer
+target_entity_type_id: crop
+target_bundle: trainer
+default_langcode: site_default
+language_alterable: false

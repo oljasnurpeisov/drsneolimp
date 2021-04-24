@@ -313,7 +313,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: 0
+        weight: -49
         context: '0'
         menu_name: main
       pager:
@@ -343,6 +343,7 @@ display:
         filters: false
         filter_groups: false
         exposed_form: false
+        query: false
       use_ajax: true
       exposed_form:
         type: bef
@@ -534,6 +535,14 @@ display:
         operator: AND
         groups:
           1: AND
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: null
     cache_metadata:
       max-age: -1
       contexts:

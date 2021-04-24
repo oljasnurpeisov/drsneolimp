@@ -1,0 +1,18 @@
+uuid: 26bebe88-9b72-42de-9163-9ae04d362271
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.employee
+id: node.employee.changed
+field_name: changed
+entity_type: node
+bundle: employee
+label: Изменение
+description: 'Время последнего редактирования материала.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.employee.body
+    - field.field.node.employee.field_birth_place
     - field.field.node.employee.field_employee_photo
     - field.field.node.employee.field_position
     - node.type.employee
@@ -20,10 +21,17 @@ content:
   body:
     label: above
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_birth_place:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_employee_photo:
     type: image
     weight: 1

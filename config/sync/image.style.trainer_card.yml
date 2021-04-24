@@ -1,0 +1,25 @@
+uuid: 97587842-e683-4338-b545-ef93722e0885
+langcode: ru
+status: true
+dependencies:
+  config:
+    - crop.type.trainer
+  module:
+    - crop
+name: trainer_card
+label: 'trainer (200 x 200)'
+effects:
+  21f06dd3-4923-4a97-b2d6-0764ad748e2e:
+    uuid: 21f06dd3-4923-4a97-b2d6-0764ad748e2e
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: trainer
+  e62000ff-0c2d-453f-8a50-f07588aeb667:
+    uuid: e62000ff-0c2d-453f-8a50-f07588aeb667
+    id: image_scale
+    weight: 2
+    data:
+      width: 200
+      height: 200
+      upscale: false

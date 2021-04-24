@@ -652,9 +652,16 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: 3
+        weight: -46
         context: '0'
         menu_name: main
+      cache:
+        type: none
+        options: {  }
+      defaults:
+        cache: false
+        use_ajax: false
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
