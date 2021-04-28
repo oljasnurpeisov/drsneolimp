@@ -40,7 +40,7 @@
     </header>
   {% endif %}
 
-  <div{{ content_attributes.addClass('content') }}>
+  <div{{ content_attributes.addClass('content p-block') }}>
     {% if drupal_region('sidebar')|render|striptags|trim  is not empty %}
       <div class="row">
         <div class="col-md-8 mb-20px">
