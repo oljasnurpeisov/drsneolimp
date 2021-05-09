@@ -187,6 +187,9 @@ ul.js-pager__items {
 #block-sidebar-menu .header__nav li:first-child {
   padding-top: 25px;
 }
+.page__body {
+  display: grid;
+}
 .page__files .file {
   padding: 21px 45px 21px 0 !important;
   border-bottom: 1px solid #C8CEDB;
