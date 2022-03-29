@@ -16,8 +16,9 @@
 <article{{ attributes.addClass(classes) }}>
   <div class="leadership-card__left">
     <div class="leadership-card__avatar">
+      {% set default_image = "/" ~ base_path ~ directory ~ "/img/news_default.svg" %}
       {% set url = content.field_employee_photo[0]['#item'].entity.uri.value %}
-      {% set img = file_url(url) %}
+      {% set img = url ? file_url(url) : default_image %}
       <img src="{{ img }}" alt="icon">
     </div>
     {{ title_prefix }}
