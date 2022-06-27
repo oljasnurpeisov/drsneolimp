@@ -26,7 +26,7 @@
         "drupal/core-recommended": "^9.0",
         "drupal/date_range_formatter": "9.0.x-dev@dev",
         "drupal/devel": "^4.1",
-        "drupal/easy_breadcrumb": "^1.13",
+        "drupal/easy_breadcrumb": "^2.0",
         "drupal/image_widget_crop": "^2.3",
         "drupal/imagemagick": "^3.1",
         "drupal/pathauto": "^1.8",
@@ -95,9 +95,6 @@
         "patches": {
             "drupal/core": {
                 "taxonomy view mode tempaltes": "https://www.drupal.org/files/issues/core-theme-suggestion-for-taxonomy-view-modes-2767243-14.patch"
-            },
-            "drupal/restui": {
-                "rest patch": "https://www.drupal.org/files/issues/2020-11-29/restui-3185372-4.patch"
             }
         }
     }
