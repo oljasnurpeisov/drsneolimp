@@ -21,14 +21,14 @@
     </div>
     {{ title_prefix }}
     {% if not page and label %}
-      <h3 class="h3 c-show-md mb-0px ml-16px" style="min-height: 6rem;">
+      <h3 class="h3 c-show-md mb-0px ml-16px">
         {{ label }}
       </h3>
     {% endif %}
     {{ title_suffix }}
   </div>
   <div {{ content_attributes.addClass('content leadership-card__right') }}>
-    <h3 class="h3 c-hidden-md mb-12px mt-10px">{{ label }}</h3>
+    <h3 class="h3 c-hidden-md mb-12px mt-10px" style="min-height: 6rem;">{{ label }}</h3>
     <p class="mb-14px">{{ content.field_kind|render|striptags|trim }}</p>
     {{ content.rate_vote_up|render  }}
     {% if content.body|render %}
