@@ -1,0 +1,45 @@
+{# Create classes array. The 'node' class is required for contextual edit links. #}
+{% set classes = [
+  'leadership-card'
+] %}
+
+{# BEM inspired class syntax: https://en.bem.info/
+   Enable this code if you would like node classes like "article article--layout-teaser", where article is the content type and teaser is the view mode.
+{% set classes = classes|merge([
+  node.bundle|clean_class,
+  view_mode ? node.bundle|clean_class ~ '--layout-' ~ view_mode|clean_class
+]) %}
+{% set title_classes = [
+  node.bundle|clean_class ~ '__title'
+] %}
+#}
+<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-26px mb-sm-16px float-left">
+<article{{ attributes.addClass(classes) }} style="display: block;">
+  <div class="leadership-card__left">
+    <div class="leadership-card__avatar">
+      {{ content.field_vote_photo|render  }}
+    </div>
+    {{ title_prefix }}
+    {% if not page and label %}
+      <h3 class="h3 c-show-md mb-0px ml-16px">
+        {{ label }}
+      </h3>
+    {% endif %}
+    {{ title_suffix }}
+  </div>
+  <div {{ content_attributes.addClass('content leadership-card__right') }}>
+    <h3 class="h3 c-hidden-md mb-12px mt-10px">{{ label }}</h3>
+    <p class="mb-14px">{{ content.field_kind|render|striptags|trim }}</p>
+    {{ content.rate_vote_up|render  }}
+    {% if content.body|render %}
+      {{ content.body }}
+    {% endif %}
+  </div>
+  {% if content.links %}
+    <div class="links">
+      {{ content.links }}
+    </div><!-- /.links -->
+  {% endif %}
+
+</article><!-- /.node -->
+</div>
